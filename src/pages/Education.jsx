@@ -2,15 +2,15 @@ import React from "react";
 import { useState } from "react";
 
 const courses = [
-  { id: 1, category: "Frontend", title: "React Basics", mentor: "John Doe", lessons: 24, image: "https://picsum.photos/id/237/200/300" },
-  { id: 2, category: "Frontend", title: "Advanced React", mentor: "Alice Brown", lessons: 30, image: "https://picsum.photos/id/237/200/300" },
-  { id: 9, category: "Frontend", title: "Advanced React", mentor: "Alice Brown", lessons: 30, image: "https://picsum.photos/id/237/200/300" },
-  { id: 3, category: "Backend", title: "Express Backend", mentor: "Azimjon Pulatov", lessons: 32, image: "https://picsum.photos/id/237/200/300" },
-  { id: 4, category: "Backend", title: "Node.js API", mentor: "Max Smith", lessons: 28, image: "https://picsum.photos/id/237/200/300" },
-  { id: 5, category: "Mobile Developer", title: "Flutter Fundamentals", mentor: "Jane Smith", lessons: 20, image: "https://picsum.photos/id/237/200/300" },
-  { id: 6, category: "Mobile Developer", title: "React Native Basics", mentor: "Robert Wilson", lessons: 18, image: "https://picsum.photos/id/237/200/300" },
-  { id: 7, category: "UI design", title: "Figma Essentials", mentor: "Sara Connor", lessons: 15, image: "https://picsum.photos/id/237/200/300" },
-  { id: 8, category: "UI design", title: "Prototyping in Figma", mentor: "David Lee", lessons: 22, image: "https://picsum.photos/id/237/200/300" },
+  { id: 1, category: "Frontend", title: "React Basics", mentor: "John Doe", lessons: 24, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 2, category: "Frontend", title: "Advanced React", mentor: "Alice Brown", lessons: 30, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 9, category: "Frontend", title: "Advanced React", mentor: "Alice Brown", lessons: 30, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 3, category: "Backend", title: "Express Backend", mentor: "Azimjon Pulatov", lessons: 32, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 4, category: "Backend", title: "Node.js API", mentor: "Max Smith", lessons: 28, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 5, category: "Mobile Developer", title: "Flutter Fundamentals", mentor: "Jane Smith", lessons: 20, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 6, category: "Mobile Developer", title: "React Native Basics", mentor: "Robert Wilson", lessons: 18, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 7, category: "UI design", title: "Figma Essentials", mentor: "Sara Connor", lessons: 15, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
+  { id: 8, category: "UI design", title: "Prototyping in Figma", mentor: "David Lee", lessons: 22, image: "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=828&q=75" },
 ];
 
 
@@ -60,12 +60,12 @@ function Education() {
 
         </div>
 
-        <div className="justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-2">
+        <div className="justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {courses
             .filter((course) => course.category === selectedCategory)
             .map((course) => (
-              <div key={course.id} className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70 w-[350px]">
-                <img src={course.image} alt={course.title} className="w-full h-40 object-cover rounded-t-md " />
+              <div key={course.id} className="border border-[#CCCCCC] rounded-lg shadow-lg backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/30 to-[#eed9ed]/70 ">
+                <img src={course.image} alt={course.title} className="w-full h-65 object-cover rounded-t-md " />
                 <div className="p-3 mb-2">
                   <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
                   <p className="font-medium">Mentor: {course.mentor}</p>
@@ -91,9 +91,9 @@ function Education() {
           How does Weya+ work?
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+          <div className="rounded-2xl  p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -106,7 +106,7 @@ function Education() {
             <p className="text-sm mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+          <div className="rounded-2xl p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -119,7 +119,7 @@ function Education() {
             <p className="text-sm mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+          <div className="rounded-2xl p-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
             <div className="flex flex-wrap justify-between">
               <div className="font-semibold">
                 Choose the right course for you
@@ -140,49 +140,41 @@ function Education() {
 
 
       {/* ------------------- */}
-      <div className="flex flex-col justify-center items-center mt-18">
+      <div className="flex flex-col justify-center items-center mt-18 w-full">
+
         <h1 className="text-4xl text-center text-[#333]">
           Choose a specialization, complete a masterclass,
           <br />and gain experience!
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-8 w-full">
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center">
-              <div className="font-semibold">
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20">
+              <p className="font-semibold">
                 Total number of students
-              </div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
+              </p>
+              <span className="text-5xl font-semibold text-[#22222280]">
                 +12,265
-              </div>
-            </div>
-
+              </span>
           </div>
 
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center">
-              <div className="font-semibold">
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+              <p className="font-semibold">
                 Number of lessons recorded
-              </div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2 ">
+              </p>
+              <span className="text-5xl font-semibold mr-1 text-[#22222280] mt-2 ">
                 +265
-              </div>
-            </div>
-
+              </span>
           </div>
 
-          <div className="rounded-2xl w-[360px] mt-5 px-3 py-3 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
-            <div className="flex flex-wrap justify-center ">
-              <div className="font-semibold">
+          <div className="rounded-2xl py-8 flex flex-col justify-center items-center border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 ">
+              <p className="font-semibold">
                 Average team experience
-              </div>
-              <div className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
+              </p>
+              <span className="text-5xl font-semibold mr-1 text-[#22222280] mt-2">
                 +7 YEARS
-              </div>
-            </div>
-
+              </span>
           </div>
 
 
@@ -201,7 +193,7 @@ function Education() {
           <br />and gain experience!
         </h1>
 
-        <div className="flex items-center justify-center w-[550px] sm:w-[800px] lg:w-[1130px] mt-20 mb-20">
+        <div className="flex items-center justify-center w-[100%] mt-20 mb-20">
           <div className="relative  px-10 py-6 rounded-3xl shadow-lg text-center w-full  mt-5 border border-[#CCC] bg-gradient-to-r from-[#eed9ed]/70 to-[#2ec05a]/30 ">
             <div className="absolute top-0 left-0 right-0 -mt-12 flex justify-center">
               <div className="w-30 h-30 bg-white rounded-full flex items-center justify-center shadow-xl border">
