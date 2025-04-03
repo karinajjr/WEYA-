@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function SelectCourse() {
   const [activeLesson, setActiveLesson] = useState(null);
+  const [openCourses, setOpenCourses] = useState({});
 
   const courses = [
     {
@@ -22,6 +23,33 @@ function SelectCourse() {
         { name: "Lesson 8", price: "30 000", locked: true },
       ],
     },
+    {
+      title: "3. Access to the Backend",
+      lessons: [
+        { name: "Lesson 9", price: "30 000", locked: true },
+        { name: "Lesson 10", price: "30 000", locked: true },
+        { name: "Lesson 11", price: "30 000", locked: true },
+        { name: "Lesson 12", price: "30 000", locked: true },
+      ],
+    },
+    {
+      title: "4. Access to the Backend",
+      lessons: [
+        { name: "Lesson 13", price: "30 000", locked: true },
+        { name: "Lesson 14", price: "30 000", locked: true },
+        { name: "Lesson 15", price: "30 000", locked: true },
+        { name: "Lesson 16", price: "30 000", locked: true },
+      ],
+    },
+    {
+      title: "5. Access to the Backend",
+      lessons: [
+        { name: "Lesson 17", price: "30 000", locked: true },
+        { name: "Lesson 18", price: "30 000", locked: true },
+        { name: "Lesson 19", price: "30 000", locked: true },
+        { name: "Lesson 20", price: "30 000", locked: true },
+      ],
+    },
   ];
 
   const handleLessonClick = (lessonName, locked) => {
@@ -29,10 +57,16 @@ function SelectCourse() {
       setActiveLesson(prev => (prev === lessonName ? null : lessonName));
     }
   };
-  
+
+  const toggleCourse = (index) => {
+    setOpenCourses(prevState => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
 
   return (
-    <div className='container mx-auto flex mt-4 gap-8 '>
+    <div className='container mx-auto flex items-start mt-4 gap-8 '>
       <div className='w-72 lg:w-92 rounded-lg border border-[#CCCCCC] overflow-hidden '>
         <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
         <div className='p-3 font-semibold text-[#333] backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30'>
@@ -57,32 +91,33 @@ function SelectCourse() {
 
       <div className='flex-1 '>
         {courses.map((course, index) => (
-          <div key={index} className="collapse border border-[#CCCCCC] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
-            <input type="checkbox" />
-            <div className="collapse-title font-semibold text-lg  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30">{course.title}</div>
-            <div className="collapse-content p-0">
-              {course.lessons.map((lesson, idx) => (
-                <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium ${lesson.locked ? '' : 'text-black'} 
-                    ${activeLesson === lesson.name ? 'backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)} >
-
-                  <spn className='flex items-center'>
-                  <i className={lesson.locked ? 'bi bi-lock mr-3 ' : 'bi bi-play border rounded-full px-0.5 py-0 text-sm  mr-2'}></i> {lesson.name}
-                  </spn>
-                  {lesson.locked ? (
-                    <button className="border px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
-                      {lesson.price} so’m BUY NOW
-                    </button>
-                  ) : (
-                    <span className="border text-xs px-3 py-1 w-40 rounded-full text-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30">{lesson.progress}%</span>
-                  )}
-                </div>
-                
-              ))}
+          <div key={index} className="border border-[#CCCCCC] rounded-lg mb-2 backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#2ec05a]/20 to-[#eed9ed]/30">
+            <div className="flex items-center justify-between cursor-pointer p-3 bg-gradient-to-r rounded-t-lg bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30" onClick={() => toggleCourse(index)}>
+              <span className="font-semibold text-lgbackdrop-sepia-0 ">{course.title}</span>
+              <i className={`bi ${openCourses[index] ? 'bi-chevron-up' : 'bi-chevron-down'}`} />
             </div>
+            {openCourses[index] && (
+              <div className="">
+                {course.lessons.map((lesson, idx) => (
+                  <div key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-[#eed9ed]/40 ${lesson.locked ? '' : 'text-black'} 
+                      ${activeLesson === lesson.name ? ' backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)} >
+                    <span className='flex items-center'>
+                      <i className={lesson.locked ? 'bi bi-lock mr-3 ' : 'bi bi-play border rounded-full px-0.5 py-0 text-sm  mr-2'}></i> {lesson.name}
+                    </span>
+                    {lesson.locked ? (
+                      <button className="border px-3 py-1 rounded-full text-xs  backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30 ">
+                        {lesson.price} so’m BUY NOW
+                      </button>
+                    ) : (
+                      <span className="border text-xs px-3 py-1 w-40 rounded-full text-center backdrop-sepia-0 bg-gradient-to-r bg-white/95  from-[#eed9ed]/70 to-[#2ec05a]/30">{lesson.progress}%</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
-
     </div>
   );
 }
