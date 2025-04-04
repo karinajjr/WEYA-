@@ -97,9 +97,6 @@ function Education() {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
   return (
     <div className="container mx-auto">
-      <LeftDrawer />
-
-      <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label>
 
       {/* ------------------- */}
       <div className="flex flex-col justify-center items-center h-[500px]">
@@ -165,14 +162,10 @@ function Education() {
                   <p className="text-sm font-medium">
                     Number of lessons: {course.lessons}
                   </p>
-                  <div className="flex justify-evenly mt-6 ">
-                    <button onClick={(e)=>{e.preventDefault();}}  className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
-                      TO BUY
-                    </button>
-                    <label htmlFor="my-drawer" className="btn w-[140px] font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40 ">
-                      READ MORE
-                    </label>
-
+                  <div className="flex mt-6">
+                    <NavLink to="select-course"  className="btn flex-1 font-medium rounded-full border border-black  bg-white/95 backdrop-sepia-0  bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/40  ">
+                    Go to Course
+                    </NavLink>
                   </div>
                 </div>
               </div>
