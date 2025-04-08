@@ -2,61 +2,55 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function MyProfile() {
+  const menus = [
+    {
+      to: "my-info",
+      icon: "bi-person-circle",
+      label: "My information",
+    },
+    {
+      to: "my-experience",
+      icon: "bi-briefcase",
+      label: "My experiences",
+    },
+    {
+      to: "my-certificate",
+      icon: "bi-patch-check",
+      label: "My certificates",
+    },
+    {
+      to: "my-paymenthistory",
+      icon: "bi-clock-history",
+      label: "Payment history",
+    },
+    {
+      to: "my-devices",
+      icon: "bi-tv",
+      label: "My devices",
+    }
+  ];
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
-    <section className="container mx-auto flex mt-4 gap-4">
-      <div className="w-72 bg-white rounded-lg">
-        <ul className="flex flex-col gap-3">
-          {[
-            {
-              to: "my-info",
-              icon: "bi-person-circle",
-              label: "My information",
-            },
-            {
-              to: "my-experience",
-              icon: "bi-briefcase",
-              label: "My experiences",
-            },
-            {
-              to: "my-certificate",
-              icon: "bi-patch-check",
-              label: "My certificates",
-            },
-            {
-              to: "my-paymenthistory",
-              icon: "bi-clock-history",
-              label: "Payment history",
-            },
-            {
-              to: "my-devices",
-              icon: "bi-tv",
-              label: "My devices",
-            },
-          ].map(({ to, icon, label }) => (
-            <li key={to}>
+    <section className="container mx-auto px-3 mt-4 flex items-start gap-4">
+
+      <div className="md:w-72 border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <ul className="flex justify-between md:flex-col gap-2">
+          {menus.map(({ to, icon, label }) => (
+            <li key={to} className="w-full">
               <button
-                onClick={() => {
-                  setSelectMenu(to);
-                }}
-                className={`btn w-full flex justify-start items-center gap-2 px-3 py-2 rounded-full text-[#333]
-                ${
-                  selectMenu === to
-                    ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-[#333]"
-                    : "border-transparent"
-                }`}
+                onClick={() => { setSelectMenu(to); }}
+                className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-2 py-1 md:py-2 rounded-md md:rounded-md text-gray-800
+                ${selectMenu === to ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20 border-gray-400" : "border-transparent"}`}
               >
-                <i
-                  className={`bi ${icon} text-lg flex justify-center items-center`}
-                ></i>
-                <span>{label}</span>
+                <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
+                <span className="text-[8px] md:text-[14px] text-nowrap">{label}</span>
               </button>
             </li>
           ))}
         </ul>
       </div>
 
-      <div className="flex-1 rounded-lg border border-gray-300">
+      <div className="w-full border border-gray-200 p-1 md:p-2 bg-gradient-to-r to-[#eed9ed]/30 from-[#2ec05a]/5 rounded-md">
         {/* My Information */}
         <div
           className={`flex flex-col gap-4 ${
@@ -373,11 +367,7 @@ function MyProfile() {
         </div>
 
         {/* My Certificate */}
-        <div
-          className={`w-full p-3 bg-white rounded-lg ${
-            selectMenu === "my-certificate" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`w-[100%] p-3 bg-white rounded-lg ${ selectMenu === "my-certificate" ? "block" : "hidden" }`} >
           <div className="w-full p-3 bg-white rounded-lg text-center">
             <div className="flex flex-col items-center justify-center p-8">
               <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
@@ -399,11 +389,7 @@ function MyProfile() {
         </div>
 
         {/* Payment History */}
-        <div
-          className={`w-full p-8 bg-white rounded-lg ${
-            selectMenu === "my-paymenthistory" ? "block" : "hidden"
-          }`}
-        >
+        <div className={`w-full p-3 bg-white rounded-lg ${ selectMenu === "my-paymenthistory" ? "block" : "hidden" }`} >
           <h1 className="font-semibold p-2 text-xl">Tolovlar tarixi</h1>
           <div className="overflow-x-auto">
             <table className="table mt-4 p-6">
