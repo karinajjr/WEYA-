@@ -16,8 +16,8 @@ function MyProfileInfoUpdate() {
 
             <div className=''>
               <div className='flex gap-2'>
-                <button className="btn btn-sm rounded-full w-20 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Upload</button>
-                <button className="btn btn-sm rounded-full w-20 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Delete</button>
+                <button className="btn btn-sm rounded-full w-20 hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Upload</button>
+                <button className="btn btn-sm rounded-full w-20 hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Delete</button>
               </div>
               <p className='text-xs opacity-50 mt-2'>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius unde laudantium ab odio, voluptatem quam.
@@ -69,9 +69,9 @@ function MyProfileInfoUpdate() {
 
           </div>
           <div className=' flex gap-3 mt-2'>
-            <button className="btn hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60 ">Сохранить изменения</button>
+            <button className="btn hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Сохранить изменения</button>
             <form method="dialog">
-              <button className="btn hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60 ">Отменить</button>
+              <button className="btn hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">Отменить</button>
             </form>
           </div>
         </div>

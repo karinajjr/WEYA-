@@ -94,11 +94,11 @@ function AddWorkExperience() {
 
           <div className="modal-action w-full flex justify-end">
             <form method="dialog">
-              <button className="rounded-lg px-2 py-1 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60 ">
+              <button className="rounded-lg px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">
                 Yopish
               </button>
             </form>
-            <button className="rounded-lg px-2 py-1 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60 ">
+            <button className="rounded-lg px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800  border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/20 ">
               Qoshish
             </button>
           </div>
