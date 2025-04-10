@@ -20,7 +20,7 @@ function AddEducation() {
                           placeholder="Yonalishingizni yozing"
                           required
                         />
-                        <i className="bi bi-book absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-400 px-1"></i>
+                        <i className="bi bi-book-fill absolute right-3 top-1/2 transform -translate-y-1/2  px-1"></i>
                       </div>
                     </fieldset>
 
@@ -36,7 +36,7 @@ function AddEducation() {
                           placeholder=" Oʻquv muassasasi nomini kiriting"
                           required
                         />
-                        <i className="bi bi-buildings absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-400 px-1"></i>
+                        <i className="bi bi-buildings absolute right-3 top-1/2 transform -translate-y-1/2  px-1"></i>
                       </div>
                     </fieldset>
 
@@ -63,7 +63,7 @@ function AddEducation() {
                           placeholder="https://"
                           required
                         />
-                        <i className="bi bi-link absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-400 px-1"></i>
+                        <i className="bi bi-link absolute right-3 top-1/2 transform -translate-y-1/2  px-1"></i>
                       </div>
                     </fieldset>
 
@@ -80,18 +80,18 @@ function AddEducation() {
                             className="input border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10  w-full pr-3 text-gray-500"
                             required
                           />
-                          <i className="bi bi-calendar absolute top-3 right-3 bg-gray-400 text-white px-1"></i>
+                          <i className="bi bi-calendar absolute top-3 right-3 px-1"></i>
                         </div>
                       </div>
                     </fieldset>
 
                     <div className="modal-action w-full flex justify-end">
                       <form method="dialog">
-                        <button className="bg-gray-400 rounded-lg px-2 py-1 text-white hover:bg-gray-500">
+                        <button className="rounded-lg px-2 py-1 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60   ">
                           Yopish
                         </button>
                       </form>
-                      <button className="bg-blue-400 rounded-lg px-2 py-1 text-white hover:bg-blue-500">
+                      <button className=" rounded-lg px-2 py-1 hover:bg-gray-200 border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#2ec05a]/10 dark:from-[#eed9ed]/10 to-[#eed9ed]/60  ">
                         Qoshish
                       </button>
                     </div>
