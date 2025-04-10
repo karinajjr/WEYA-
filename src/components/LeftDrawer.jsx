@@ -2,7 +2,7 @@ import React from 'react'
 
 function LeftDrawer() {
   return (
-    <div className="drawer z-20 text-gray-900 dark:text-gray-50">
+    <div className="drawer z-20">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-side">
         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>

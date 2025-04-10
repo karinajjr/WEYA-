@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <Login />
-      <div className="container mx-auto px-3 sticky top-1 my-3 z-15 text-gray-900 dark:text-gray-50">
+      <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
         <div
           className="w-full shadow-none border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10
         rounded-full px-[25px] flex justify-between items-center h-[50px]"
@@ -61,7 +61,7 @@ function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu rounded-md w-62 p-2 mt-2 shadow-sm border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"
+                className="dropdown-content menu rounded-md w-72 p-2 mt-2 -mr-6 shadow-sm border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"
               >
                 <div className="p-2 flex gap-2">
                   <img
