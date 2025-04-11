@@ -190,10 +190,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-database text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal "> Data Science</h1>
               </div>
             </div>
 
@@ -204,10 +204,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-file-code text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Development</h1>
               </div>
             </div>
 
@@ -218,10 +218,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-pie-chart text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Business</h1>
               </div>
             </div>
 
@@ -232,10 +232,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-image text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Photography</h1>
               </div>
             </div>
 
@@ -246,10 +246,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-music-note-beamed text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Music</h1>
               </div>
             </div>
 
@@ -260,10 +260,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-file-text text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Profisinal dev.</h1>
               </div>
             </div>
 
@@ -274,10 +274,10 @@ function Home() {
 
           <div className="p-5 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
-              <i class="bi bi-vector-pen text-xl"></i>
+              <i class="bi bi-graph-up  text-xl"></i>
 
               <div>
-                <h1 className="text-md font-normal ">Desing</h1>
+                <h1 className="text-md font-normal ">Marketing</h1>
               </div>
             </div>
 
@@ -285,10 +285,6 @@ function Home() {
               <i class="bi bi-arrow-up-right flex justify-center items-center btn btn-sm border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
           </div>
-
-        
-
-
 
         </div>
       </div>
