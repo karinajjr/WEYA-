@@ -46,7 +46,7 @@ function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mb-4">
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -60,15 +60,14 @@ function Home() {
               </div>
             </div>
 
-
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
 
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -84,13 +83,13 @@ function Home() {
 
 
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
 
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -106,13 +105,13 @@ function Home() {
 
 
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
 
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -128,13 +127,13 @@ function Home() {
 
 
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
 
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -150,13 +149,13 @@ function Home() {
 
 
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
 
 
-          <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+          <div className="p-4 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
               <div className="avatar ">
                 <div className="w-16 rounded-full">
@@ -172,7 +171,7 @@ function Home() {
 
 
             <div>
-              <i class="bi bi-arrow-up-right p-2 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
+              <i class="bi bi-arrow-up-right p-2 border rounded-sm hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
 
           </div>
@@ -303,11 +302,6 @@ function Home() {
               <i class="bi bi-arrow-up-right p-1 border rounded-xs hover:bg-gray-200 dark:hover:bg-gray-800  border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"></i>
             </div>
           </div>
-
-
-
-
-
 
 
 
