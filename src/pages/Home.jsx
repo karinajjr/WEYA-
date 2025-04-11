@@ -44,7 +44,7 @@ function Home() {
           <p className="mb-8 text-sm ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, itaque. <br /> Labore tempora voluptates debitis laborum. Labore tempora voluptates debitis laborum</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mb-4">
 
           <div className="p-2 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
@@ -187,7 +187,7 @@ function Home() {
           <h3 className="font-bold text-4xl mb-4">Most Popular Category </h3>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
 
           <div className="p-3 flex justify-between items-center rounded-xl border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
             <div className="flex gap-3 items-center">
