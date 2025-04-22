@@ -4,7 +4,7 @@ import GoogleIcon from '../../public/GoogleIcon.png'
 function Login() {
   return (
     <>
-      <div className="bg-[url('/Bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen ">
+      <div className="bg-[url('/Bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen absolute top-0 right-0 left-0 bottom-0 bg-base-100 z-20">
 
         <div className=' border border-black/12 bg-white rounded-2xl px-10 py-12 shadow'>
           <div className='text-center mb-4'>
