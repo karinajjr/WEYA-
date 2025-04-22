@@ -1,18 +1,27 @@
 import React from 'react'
-import GoogleIcon from '../../public/GoogleIcon.png'
+import { useState } from 'react';
+import GoogleIcon from '../../public/assets/logo/GoogleIcon.png'
 
 function Login() {
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <>
-      <div className="bg-[url('/Bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen absolute top-0 right-0 left-0 bottom-0 bg-base-100 z-20">
+      <div className="bg-[url('../../public/assets/Bg.png')] bg-no-repeat w-full  flex justify-center items-center bg-cover bg-center h-screen absolute top-0 right-0 left-0 bottom-0 bg-base-100 z-20">
 
-        <div className=' border border-black/12 bg-white rounded-2xl px-10 py-12 shadow'>
+        <div className=' border border-black/12 bg-white rounded-2xl px-10 py-12 shadow sm:w-[450px]  '>
           <div className='text-center mb-4'>
             <h1 className='font-medium text-3xl mb-2'>Hisobingizga kiring</h1>
             <p className='text-[#686868] text-lg font-light'>Xusg kelibsiz! Quyidegilar orqali <br /> hisobingiga kiring</p>
           </div>
+
           <div className=' mb-3'>
-            <button className='btn border-none bg-white w-full shadow'> 
+            <button className='btn border-none bg-white w-full shadow'>
               <img src={GoogleIcon} className='w-4' alt="" />Google</button>
           </div>
 
@@ -27,16 +36,19 @@ function Login() {
           <div className='mb-3'>
             <p className='text-xs font-medium mb-1 '>Emailingizni kiriting</p>
             <label className="input w-full border-none bg-[#F7F8F9]">
-              <i class="bi bi-envelope text-[#686868]"></i>
+              <i className="bi bi-envelope text-[#686868]"></i>
               <input type="text" className="grow" placeholder="Email" />
             </label>
           </div>
+
           <div>
-            <p className='text-xs font-medium mb-1'>Parolni kiriting</p>
-            <label className="input w-full border-none bg-[#F7F8F9]">
-              <i class="bi bi-lock text-[#686868]"></i>
-              <input type="search" className="grow" placeholder="Parol" />
-              <kbd className=""><i class="bi bi-eye-slash text-[#686868]"></i></kbd>
+            <p className="text-xs font-medium mb-1">Parolni kiriting</p>
+            <label className="input w-full border-none bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded">
+              <i className="bi bi-lock text-[#686868]"></i>
+              <input type={showPassword ? 'text' : 'password'} className="grow bg-transparent outline-none" placeholder="Parol" />
+              <button type="button" onClick={togglePassword} className="focus:outline-none" >
+                <i className={`bi ${showPassword ? 'bi-eye' : 'bi-eye-slash'} text-[#686868]`}></i>
+              </button>
             </label>
           </div>
 
