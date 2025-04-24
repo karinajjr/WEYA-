@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BuyModal from "../components/BuyModal";
 
 const courses = [
@@ -50,6 +50,23 @@ const courses = [
 ];
 
 function SelectLesson() {
+  const [view, setView] = useState("both");
+
+  useEffect(() => {
+    const updateView = () => {
+      const isMobile = window.innerWidth < 640;
+      setView((prev) => {
+        if (isMobile && prev !== "right") return "right";
+        if (!isMobile && prev !== "both") return "both";
+        return prev;
+      });
+    };
+
+    updateView(); // вызвать при загрузке
+    window.addEventListener("resize", updateView);
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
+
   const [activeLesson, setActiveLesson] = useState(null);
 
   const handleLessonClick = (lessonName, locked) => {
@@ -63,15 +80,17 @@ function SelectLesson() {
       <BuyModal />
       <div className="container mx-auto px-3 items-start flex gap-4 mt-4 text-gray-900 dark:text-gray-50">
         {/* Левая панель */}
-        <div className="w-1/3 rounded-2xl p-4 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10">
+        <div className={`w-3/3 sm:w-1/3 rounded-2xl p-4 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 ${view === "right" ? "hidden" : "block"}`}>
           <div className="flex justify-between items-center mb-4">
             <div>
               <h3 className="font-medium">Express Backend</h3>
               <p className="text-sm">You have completed 34% of this course</p>
             </div>
-            <button className="btn btn-xs bg-white dark:bg-gray-600 border-0">
-              <i className="bi bi-chevron-right flex justify-center items-center"></i>
+          
+            <button className="btn btn-xs bg-white dark:bg-gray-600 border-0 block sm:hidden" onClick={() => setView("right")} >
+            <i class="bi bi-x-lg"></i>
             </button>
+
           </div>
 
           {courses.map((course, index) => (
@@ -131,17 +150,32 @@ function SelectLesson() {
         </div>
 
         {/* Правая часть */}
-        <div className="w-2/3 border border-[#ccc] dark:border-gray-600 p-4 rounded-2xl  backdrop-blur">
+        <div className={`w-3/3 sm:w-2/3 border border-[#ccc] dark:border-gray-600 p-4 rounded-2xl backdrop-blur ${view === "left" ? "hidden" : "block"}`}>
           <div className="flex justify-between items-center mb-4">
             <div>
               <h3 className="text-xl font-semibold">1. Express Backend</h3>
               <p className="text-md">12/3 | 260 min</p>
             </div>
 
-            <button className="btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 ">
-              <span>Next lesson</span>
-              <i className="bi bi-chevron-right flex justify-center items-center text-xs"></i>
-            </button>
+
+            <div className="flex gap-1">
+              <button className="btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 ">
+                <span>Next lesson</span>
+                <i className="bi bi-chevron-right flex justify-center items-center text-xs"></i>
+              </button>
+
+
+              <button
+                className="btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 block sm:hidden"
+                onClick={() => setView("left")}
+              >
+               <i class="bi bi-list-nested"></i>
+              </button>
+            </div>
+
+
+
+
           </div>
 
           <div className="w-full h-[300px] rounded-2xl border border-[#ccc] dark:border-gray-600 flex items-center justify-center  bg-gradient-to-r from-[#2ec05a]/20 dark:to-[#eed9ed]/30 to-[#eed9ed]/70">
