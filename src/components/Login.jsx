@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 import GoogleIcon from '../../public/assets/logo/GoogleIcon.png'
 
@@ -58,16 +59,20 @@ function Login() {
               <input type="checkbox" defaultChecked className="checkbox text-[#686868] border border-[#686868] w-4.5 h-4.5 mr-1.5 rounded-sm " />
               <p className='text-xs text-[#686868]'>Eslab qolish</p>
             </div>
+            <NavLink to="ComponyRegistration" >
             <p className="text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent">
               Parolni unitdingizmi?
             </p>
+            </NavLink>
           </div>
 
           <button className='btn w-full border-none  bg-gradient-to-r from-[#8360C3] to-[#2EBF91] text-white mt-4 rounded-lg'>Kirish</button>
 
           <div className='flex justify-between gap-10 mt-3'>
             <p className='text-xs text-[#686868]'>Sizning hisobingiz yo’qmi?</p>
-            <p className='text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent'>Ro’yxatdan o’tish</p>
+            <NavLink to="registration" >
+              <span className="text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent">Ro’yxatdan o’tish</span>
+            </NavLink>
           </div>
         </div>
       </div>
