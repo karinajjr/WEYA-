@@ -2,3 +2,19 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @plugin "daisyui" { themes: all; }
+
+ html.dark {
+  /* background-color: #000318; */
+  /* background-attachment: fixed; */
+  /* background-repeat: repeat; */
+}
+
+html:not(.dark) {
+  /* background-color: #fcfcfc; */
+  /* background-attachment: fixed; */
+  /* background-repeat: repeat; */
+}
+
+html {
+  transition: background-color .7s ease-in-out, color .7s ease-in-out;
+}
