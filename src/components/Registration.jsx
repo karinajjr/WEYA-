@@ -32,7 +32,7 @@ function Registration() {
   const [registrationType, setRegistrationType] = useState("");
   return (
     <>
-      <div className="bg-[url('../../public/assets/Bg.png')] bg-cover bg-no-repeat w-full h-screen flex justify-center items-center">
+      <div className="  w-full h-screen flex justify-center items-center">
         <div className="absolute top-5 right-5">
           <ThemeSwitcher />
         </div>
