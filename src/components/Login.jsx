@@ -50,7 +50,7 @@ function Login() {
 
           <div>
             <p className="text-xs font-medium mb-1">Parolni kiriting</p>
-            <label className="input w-full border-none bg-gray-50 dark:bg-[gray-900] flex items-center gap-2 px-3 py-2 shadow">
+            <label className="input w-full border-none bg-gray-50 dark:bg-[#020617] flex items-center gap-2 px-3 py-2 shadow">
               <i className="bi bi-lock text-black/50 dark:text-gray-50 "></i>
               <input
                 type={showPassword ? "text" : "password"}
