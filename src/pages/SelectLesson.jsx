@@ -54,18 +54,19 @@ function SelectLesson() {
 
   useEffect(() => {
     const updateView = () => {
-      const isMobile = window.innerWidth < 640;
+      const isTablet = window.innerWidth < 1025;
       setView((prev) => {
-        if (isMobile && prev !== "right") return "right";
-        if (!isMobile && prev !== "both") return "both";
+        if (isTablet && prev !== "right") return "right";
+        if (!isTablet && prev !== "both") return "both";
         return prev;
       });
     };
-
-    updateView(); // вызвать при загрузке
+  
+    updateView();
     window.addEventListener("resize", updateView);
     return () => window.removeEventListener("resize", updateView);
   }, []);
+  
 
   const [activeLesson, setActiveLesson] = useState(null);
 
@@ -80,14 +81,14 @@ function SelectLesson() {
       <BuyModal />
       <div className="container mx-auto px-3 items-start flex gap-4 mt-4 text-gray-900 dark:text-gray-50">
         {/* Левая панель */}
-        <div className={`w-3/3 sm:w-1/3 rounded-2xl p-4 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 ${view === "right" ? "hidden" : "block"}`}>
+        <div className={`w-3/3 lg:w-1/3 rounded-2xl p-4 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 ${view === "right" ? "hidden" : "block"}`}>
           <div className="flex justify-between items-center mb-4">
             <div>
               <h3 className="font-medium">Express Backend</h3>
               <p className="text-sm">You have completed 34% of this course</p>
             </div>
           
-            <button className="btn btn-xs bg-white dark:bg-gray-600 border-0 block sm:hidden" onClick={() => setView("right")} >
+            <button className="btn btn-xs bg-white dark:bg-gray-600 border-0 block lg:hidden" onClick={() => setView("right")} >
             <i class="bi bi-x-lg"></i>
             </button>
 
@@ -150,7 +151,7 @@ function SelectLesson() {
         </div>
 
         {/* Правая часть */}
-        <div className={`w-3/3 sm:w-2/3 border border-[#ccc] dark:border-gray-600 p-4 rounded-2xl backdrop-blur ${view === "left" ? "hidden" : "block"}`}>
+        <div className={`w-3/3 lg:w-2/3 border border-[#ccc] dark:border-gray-600 p-4 rounded-2xl backdrop-blur ${view === "left" ? "hidden" : "block"}`}>
           <div className="flex justify-between items-center mb-4">
             <div>
               <h3 className="text-xl font-semibold">1. Express Backend</h3>
@@ -166,7 +167,7 @@ function SelectLesson() {
 
 
               <button
-                className="btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 block sm:hidden"
+                className="btn bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600 block lg:hidden"
                 onClick={() => setView("left")}
               >
                <i class="bi bi-list-nested"></i>
@@ -182,7 +183,6 @@ function SelectLesson() {
             <i className="bi bi-camera-video text-3xl text-gray-600 dark:text-gray-300"></i>
           </div>
 
-          {/* name of each tab group should be unique */}
           <div className="tabs tabs-lift mt-4 dark:border-white">
             <label className="tab flex justify-center items-center gap-2 ">
               <input type="radio" name="my_tabs_4" />
