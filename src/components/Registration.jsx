@@ -33,13 +33,13 @@ function Registration() {
   const [registrationType, setRegistrationType] = useState("");
   return (
     <>
-      <div className="  w-full h-screen flex justify-center items-center">
+      <div className="w-full h-screen flex justify-center items-center">
         <div className="absolute top-5 right-5">
           <ThemeSwitcher />
         </div>
 
         {registrationType === "" && (
-          <div className="border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
+          <div className=" border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
             <div className="text-center mb-12">
               <h1 className="font-medium text-3xl mb-2">
                 Hisobingizga kiring!
@@ -76,15 +76,15 @@ function Registration() {
 
         {registrationType === "personal" && (
           <div className="">
-            <div className="border border-black/12 bg-white rounded-2xl px-10 py-12 shadow sm:w-[450px]">
+            <div className=" bg-white  dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px] dark:text-gray-50">
               <div className="text-center mb-4">
                 <h1 className="font-medium text-3xl mb-2">Ro’yxatdan o’tish</h1>
               </div>
 
               <div className="mb-3">
                 <p className="text-xs font-medium mb-1">Ism familya</p>
-                <label className="input w-full border-none bg-[#F7F8F9]">
-                  <input type="text" className="grow" placeholder="Yozing" />
+                <label className="input w-full border-none dark:bg-[#020617]  bg-[#F7F8F9] shadow">
+                  <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
                 </label>
               </div>
 
@@ -92,82 +92,58 @@ function Registration() {
                 <p className="text-xs font-medium mb-1">
                   Emailingizni kiriting
                 </p>
-                <label className="input w-full border-none bg-[#F7F8F9]">
-                  <i className="bi bi-envelope text-[#686868]"></i>
-                  <input type="text" className="grow" placeholder="Email" />
+                <label className="input w-full  bg-[#F7F8F9] border-none dark:bg-[#020617] shadow">
+                  <i className="bi bi-envelope text-black/50 dark:text-gray-50"></i>
+                  <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Email" />
                 </label>
               </div>
 
               <div className="mb-3">
                 <p className="text-xs font-medium mb-1">Parol o’ylab toping</p>
-                <label className="input w-full border-none bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded">
-                  <i className="bi bi-lock text-[#686868]"></i>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="grow bg-transparent outline-none"
-                    placeholder="Parol"
-                  />
-                  <button
-                    type="button"
-                    onClick={togglePassword}
-                    className="focus:outline-none"
-                  >
-                    <i
-                      className={`bi ${
-                        showPassword ? "bi-eye" : "bi-eye-slash"
-                      } text-[#686868]`}
-                    ></i>
+                <label className="input w-full bg-[#F7F8F9] border-none flex items-center gap-2 px-3 py-2 rounded dark:bg-[#020617] shadow">
+                  <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
+                  <input type={showPassword ? "text" : "password"} className="placeholder:text-black/50 dark:placeholder:text-gray-50"   placeholder="Parol" />
+                  <button  type="button" onClick={togglePassword}   className="focus:outline-none">
+                    <i  className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash" } text-black/50 dark:text-gray-50`} ></i>
                   </button>
                 </label>
               </div>
 
               <div className="mb-3">
                 <p className="text-xs font-medium mb-1">Parolni tasdiqlang</p>
-                <label className="input w-full border-none bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded">
-                  <i className="bi bi-lock text-[#686868]"></i>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="grow bg-transparent outline-none"
-                    placeholder="Parol"
-                  />
-                  <button
-                    type="button"
-                    onClick={togglePassword}
-                    className="focus:outline-none"
-                  >
-                    <i
-                      className={`bi ${
-                        showPassword ? "bi-eye" : "bi-eye-slash"
-                      } text-[#686868]`}
-                    ></i>
+                <label className="input w-full  bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded border-none dark:bg-[#020617] shadow ">
+                  <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
+                  <input type={showPassword ? "text" : "password"} className="placeholder:text-black/50 dark:placeholder:text-gray-50"   placeholder="Parol"   />
+                  <button  type="button" onClick={togglePassword} className="focus:outline-none" >
+                    <i  className={`bi ${showPassword ? "bi-eye" : "bi-eye-slash" } text-black/50 dark:text-gray-50`}></i>
                   </button>
                 </label>
               </div>
 
               <div className="flex items-center gap-4 mb-4">
                 <hr className="flex-grow border-[#F5F5F5]" />
-                <p className="text-[#686868] text-center text-xs">Yoki</p>
+                <p className="text-black/50 dark:text-gray-50 text-center text-xs">Yoki</p>
                 <hr className="flex-grow border-[#F5F5F5]" />
               </div>
 
               <div className=" mb-3">
-                <button className="btn border-none bg-white w-full shadow">
+                <button className="btn bg-white w-full shadow border-none dark:bg-[#020617]">
                   <img src={GoogleIcon} className="w-4" alt="" />
                   Google
                 </button>
               </div>
 
-              <button className="btn w-full border-none bg-gradient-to-r from-[#8360C3] to-[#2EBF91] text-white mt-4 rounded-lg">
+              <button className="btn w-full border-none bg-[#0EA5E9] text-white mt-4 rounded-lg">
                 Davom etish
               </button>
 
               <div className="flex justify-between gap-10 mt-3">
-                <p className="text-xs text-[#686868]">
+                <p className="text-xs text-black/50 dark:text-gray-50">
                   Sizning hisobingiz mavjudmi?
                 </p>
                 <NavLink
                   to="/login"
-                  className="text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent"
+                  className="text-xs font-medium text-[#0EA5E9]"
                 >
                   Hisobga kirish
                 </NavLink>
@@ -176,7 +152,7 @@ function Registration() {
           </div>
         )}
         {registrationType === "company" && (
-          <div className="border border-black/12 bg-white rounded-2xl px-10 py-12 shadow w-[400px] md:w-[805px]">
+          <div className="border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow w-[400px] md:w-[805px] dark:text-gray-50 ">
             <div className="text-center mb-4">
               <h1 className="font-medium text-3xl mb-2">Ro’yxatdan o’tish</h1>
             </div>
@@ -189,22 +165,22 @@ function Registration() {
               >
                 <div className="">
                   <p className="text-xs font-medium mb-1">Kompaniya nomi</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <input type="text" className="grow" placeholder="Example" />
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Example" />
                   </label>
                 </div>
 
                 <div className="">
                   <p className="text-xs font-medium mb-1">Kompaniya manzili</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <input type="text" className="grow" placeholder="Example" />
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Example" />
                   </label>
                 </div>
 
                 <div className="">
                   <p className="text-xs font-medium mb-1">Biznes raqami</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <input type="text" className="grow" placeholder="Yozing" />
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
                   </label>
                 </div>
 
@@ -212,17 +188,17 @@ function Registration() {
                   <p className="text-xs font-medium mb-1">
                     Ma’sul shaxsning ismi
                   </p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <input type="text" className="grow" placeholder="Yozing" />
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <input type="text" className="placeholder:text-black/50 dark:placeholder:text-gray-50" placeholder="Yozing" />
                   </label>
                 </div>
 
                 <div className="">
                   <p className="text-xs font-medium mb-1">Telefon raqam</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="+998 90 000 00 00"
                     />
                   </label>
@@ -230,10 +206,10 @@ function Registration() {
 
                 <div className=" ">
                   <p className="text-xs font-medium mb-1">Telegram ID</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="51723456"
                     />
                   </label>
@@ -247,11 +223,11 @@ function Registration() {
               >
                 <div className=" ">
                   <p className="text-xs font-medium mb-1">Email</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <i className="bi bi-envelope text-[#686868]"></i>
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <i className="bi bi-envelope text-black/50 dark:text-gray-50"></i>
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="Example@gmail.com"
                     />
                   </label>
@@ -261,10 +237,10 @@ function Registration() {
                   <p className="text-xs font-medium mb-1">
                     Kompaniya xujjat raqami
                   </p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="00000000000"
                     />
                   </label>
@@ -272,10 +248,10 @@ function Registration() {
 
                 <div className=" ">
                   <p className="text-xs font-medium mb-1">Sertificat raqami</p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="00000000000"
                     />
                   </label>
@@ -285,11 +261,11 @@ function Registration() {
                   <p className="text-xs font-medium mb-1">
                     Kompaniya web sayti
                   </p>
-                  <label className="input w-full border-none bg-[#F7F8F9]">
-                    <i className="bi bi-envelope text-[#686868]"></i>
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
+                    <i className="bi bi-envelope text-black/50 dark:text-gray-50"></i>
                     <input
                       type="text"
-                      className="grow"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="htps//misol.com"
                     />
                   </label>
@@ -299,11 +275,11 @@ function Registration() {
                   <p className="text-xs font-medium mb-1">
                     Parolingiz o’rnating
                   </p>
-                  <label className="input w-full border-none bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded">
-                    <i className="bi bi-lock text-[#686868]"></i>
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] flex items-center gap-2 px-3 py-2 rounded shadow">
+                    <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="grow bg-transparent outline-none"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50 bg-transparent outline-none"
                       placeholder="Parol"
                     />
                     <button
@@ -314,7 +290,7 @@ function Registration() {
                       <i
                         className={`bi ${
                           showPassword ? "bi-eye" : "bi-eye-slash"
-                        } text-[#686868]`}
+                        } text-black/50 dark:text-gray-50`}
                       ></i>
                     </button>
                   </label>
@@ -324,11 +300,11 @@ function Registration() {
                   <p className="text-xs font-medium mb-1">
                     Parolingizni qayta tasdiqlang
                   </p>
-                  <label className="input w-full border-none bg-[#F7F8F9] flex items-center gap-2 px-3 py-2 rounded">
-                    <i className="bi bi-lock text-[#686868]"></i>
+                  <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] flex items-center gap-2 px-3 py-2 rounded shadow">
+                    <i className="bi bi-lock text-black/50 dark:text-gray-50"></i>
                     <input
                       type={showPassword ? "text" : "password"}
-                      className="grow bg-transparent outline-none"
+                      className="placeholder:text-black/50 dark:placeholder:text-gray-50"
                       placeholder="Parol"
                     />
                     <button
@@ -339,7 +315,7 @@ function Registration() {
                       <i
                         className={`bi ${
                           showPassword ? "bi-eye" : "bi-eye-slash"
-                        } text-[#686868]`}
+                        } text-black/50 dark:text-gray-50`}
                       ></i>
                     </button>
                   </label>
@@ -349,12 +325,12 @@ function Registration() {
               <div className={`${showInfo === true ? "hidden" : ""}`}>
                 <div className="flex items-center gap-4 mb-4 mt-3">
                   <hr className="flex-grow border-[#F5F5F5]" />
-                  <p className="text-[#686868] text-center text-xs">Yoki</p>
+                  <p className="text-black/50 dark:text-gray-50 text-center text-xs">Yoki</p>
                   <hr className="flex-grow border-[#F5F5F5]" />
                 </div>
 
                 <div className=" mb-3">
-                  <button className="btn border-none bg-white w-full shadow">
+                  <button className="btn border-none bg-white dark:bg-[#020617] w-full shadow">
                     <img src={GoogleIcon} className="w-4" alt="" />
                     Google
                   </button>
@@ -364,19 +340,19 @@ function Registration() {
               {showInfo !== true && (
                 <button
                   onClick={toggleShowInfo}
-                  className="w-full mt-4 btn md:hidden bg-gradient-to-r from-[#8360C3] to-[#2EBF91] text-white"
+                  className="w-full mt-4 btn md:hidden bg-[#0EA5E9] text-white"
                 >
                   Qo'shimcha ma'lumotlarga o'tish
                 </button>
               )}
 
               {showInfo === true && (
-                <button className="w-full mt-4 btn md:hidden bg-gradient-to-r from-[#8360C3] to-[#2EBF91] text-white">
+                <button className="w-full mt-4 btn md:hidden bg-[#0EA5E9] text-white">
                   Kirish
                 </button>
               )}
 
-              <button className="hidden md:block btn w-full border-none bg-gradient-to-r from-[#8360C3] to-[#2EBF91] text-white mt-4 rounded-lg">
+              <button className="hidden md:block btn w-full border-none bg-[#0EA5E9] text-white mt-4 rounded-lg">
                 Kirish
               </button>
 
@@ -385,12 +361,12 @@ function Registration() {
                   showInfo === true ? "hidden" : ""
                 }`}
               >
-                <p className="text-xs text-[#686868]">
+                <p className="text-xs text-black/50 dark:text-gray-50">
                   Sizning hisobingiz mavjudmi?
                 </p>
                 <NavLink
                   to="/login"
-                  className="text-xs font-medium bg-gradient-to-r from-[#8360C3] to-[#2EBF91] bg-clip-text text-transparent"
+                  className="text-xs font-medium text-[#0EA5E9]"
                 >
                   Hisobga kirish
                 </NavLink>
