@@ -183,11 +183,10 @@ function Education() {
             {categories.map((category) => (
               <button
                 key={category}
-                className={`btn btn-sm rounded-full from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "border-gray-800 dark:border-gray-400 bg-gradient-to-r bg-base-100"
-                    : "border-gray-300 dark:border-gray-700 bg-gradient-to-l bg-base-300"
-                }`}
+                className={`btn btn-sm rounded-full from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300 ${selectedCategory === category
+                  ? "border-gray-800 dark:border-gray-400 bg-gradient-to-r bg-base-100"
+                  : "border-gray-300 dark:border-gray-700 bg-gradient-to-l bg-base-300"
+                  }`}
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
@@ -201,41 +200,94 @@ function Education() {
               .map((course) => (
                 <div
                   key={course.id}
-                  className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 transition-all duration-300 "
-                >
+                  className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-base-200 "  >
                   <NavLink to="select-course">
-                    <img
-                      src={course.image}
-                      className="w-full h-48 object-cover"
-                    />
+                    <img src={course.image} className="w-full h-48 object-cover" />
                   </NavLink>
                   <div className="p-3 md:p-4">
-                    <div className="flex justify-between text-sm opacity-60">
-                      <div className="flex gap-1">
-                        <i className="bi bi-play-circle flex justify-center items-center border-0 rounded-full"></i>
-                        <span className="font-semibold">
-                          {course.lessons} Lessons
-                        </span>
-                      </div>
-                      <div className="flex gap-1">
-                        <i className="bi bi-people-fill flex justify-center items-center border-0 rounded-full"></i>
-                        <p className="font-semibold">{course.people} 245</p>
-                      </div>
-                    </div>
 
-                    <div className="flex justify-between mt-3">
+
+                    <div className="flex justify-between ">
                       <h3 className="text-xl font-semibold mb-2">
                         {course.title}
                       </h3>
                       <h3 className="text-xl font-semibold mb-2">34$</h3>
                     </div>
 
-                    <p className="text-xs">{course.text}</p>
+                    <p className="text-xs opacity-60">{course.text}</p>
 
+                    <div className="flex justify-between text-sm ">
+
+
+                      <div class="flex justify-end mt-4  gap-2">
+                        <span class="font-medium text-transparent bg-gradient-to-r from-[#FF0000]/60  to-[#FDCF58] bg-clip-text transition-all duration-300">
+                          4.8
+                        </span>
+
+                        <div class="flex gap-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" fill="url(#starGradient)" />
+                          </svg>
+
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" fill="url(#starGradient)" />
+                          </svg>
+
+
+                        </div>
+                      </div>
+                      <div className="flex gap-1 opacity-60">
+                        <i className="bi bi-people-fill flex justify-center items-center border-0 rounded-full"></i>
+                        <p className="font-semibold">{course.people} 245</p>
+                      </div>
+                    </div>
                     <div className="flex mt-5">
                       <NavLink
                         to="select-course"
-                        className="uppercase bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10 btn w-full rounded-full border border-gray-300 hover:border-gray-400 dark:border-gray-600"
+                        className="uppercase bg-[#0EA5E9] btn w-full rounded-lg text-white"
                       >
                         Go to Course
                       </NavLink>
@@ -245,168 +297,172 @@ function Education() {
               ))}
           </div>
         </div>
-        {/* ------------------- */}
+        <div>
 
-        {/* LEADING TEACHERS ------------------- START */}
-        <div className="flex flex-col justify-center items-center my-12">
-          <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
-            <span>Yetakchi</span>
-            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
-              O‘qituvchilar
-            </span>
-          </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
-            {[...Array(6).keys()].map((i) => (
-              <div className="p-6 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
-                <div className="flex gap-3 items-center">
-                  <div className="avatar ">
-                    <div className="w-14 rounded-full">
-                      <img
-                        src={`https://randomuser.me/api/portraits/men/${i}.jpg`}
-                      />
+          {/* ------------------- */}
+
+          {/* LEADING TEACHERS ------------------- START */}
+          <div className="flex flex-col justify-center items-center my-12">
+            <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
+              <span>Yetakchi</span>
+              <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
+                O‘qituvchilar
+              </span>
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
+              {[...Array(6).keys()].map((i) => (
+                <div className="p-6 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
+                  <div className="flex gap-3 items-center">
+                    <div className="avatar ">
+                      <div className="w-14 rounded-full">
+                        <img
+                          src={`https://randomuser.me/api/portraits/men/${i}.jpg`}
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <h1 className="text-lg font-semibold">Zerda Jursinova</h1>
+                      <p className="text-xs opacity-50">Frontend Dev.</p>
                     </div>
                   </div>
 
-                  <div>
-                    <h1 className="text-lg font-semibold">Zerda Jursinova</h1>
-                    <p className="text-xs opacity-50">Frontend Dev.</p>
+                  <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
+                    <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* LEADING TEACHERS ------------------- END */}
+
+          {/* POPULAR DESTINATIONS ------------------- START */}
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
+              <span>Eng Ommabop</span>
+              <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
+                Yo‘nalishlar
+              </span>
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full">
+              {popular_des.map((item) => (
+                <div className="p-5 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
+                  <div className="flex gap-3 items-center">
+                    <i className={`${item.icon} text-xl flex justify-center items-center`}></i>
+
+                    <div>
+                      <h1 className="text-md font-normal ">{item.name}</h1>
+                    </div>
+                  </div>
+
+                  <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
+                    <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* POPULAR DESTINATIONS ------------------- END */}
+
+          {/* ------------------- */}
+          <div className="flex flex-col justify-center items-center my-12">
+            <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
+              <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2 ">
+                WeYa+
+              </span>
+              <span>qanday ishlaydi?</span>
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
+              <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300 ">
+                <div className="flex flex-wrap justify-between relative">
+                  <p className="font-semibold w-[80%] h-15">
+                    O'zingizga mos masterklassni tanlaysiz.
+                  </p>
+                  <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                    01
                   </div>
                 </div>
 
-                <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
-                  <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
-                </div>
+                <p className="text-sm mt-4 opacity-90">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repudiandae asperiores magni sunt dicta veritatis nostrum.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* LEADING TEACHERS ------------------- END */}
 
-        {/* POPULAR DESTINATIONS ------------------- START */}
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
-            <span>Eng Ommabop</span>
-            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
-              Yo‘nalishlar
-            </span>
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full">
-            {popular_des.map((item) => (
-              <div className="p-5 flex justify-between items-center rounded-xl bg-base-100 hover:bg-base-200 border border-base-300">
-                <div className="flex gap-3 items-center">
-                  <i className={`${item.icon} text-xl flex justify-center items-center`}></i>
-
-                  <div>
-                    <h1 className="text-md font-normal ">{item.name}</h1>
+              <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
+                <div className="flex flex-wrap justify-between relative">
+                  <p className="font-semibold w-[80%] h-15">
+                    Berilgan darslarni o'rganib, vazifalarni bajarasiz.
+                  </p>
+                  <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                    02
                   </div>
                 </div>
 
-                <div className="btn btn-circle p-2 border border-base-300 hover:bg-sky-500 group">
-                  <i className="bi bi-arrow-up-right flex justify-center items-center text-gray-900 dark:text-gray-50 group-hover:text-gray-50"></i>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* POPULAR DESTINATIONS ------------------- END */}
-
-        {/* ------------------- */}
-        <div className="flex flex-col justify-center items-center my-12">
-          <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
-            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2 ">
-              WeYa+
-            </span>
-            <span>qanday ishlaydi?</span>
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 ">
-            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300 ">
-              <div className="flex flex-wrap justify-between relative">
-                <p className="font-semibold w-[80%] h-15">
-                  O'zingizga mos masterklassni tanlaysiz.
+                <p className="text-sm mt-4 opacity-90">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  sint voluptas itaque nam, molestias modi.
                 </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
-                  01
-                </div>
               </div>
 
-              <p className="text-sm mt-4 opacity-90">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Repudiandae asperiores magni sunt dicta veritatis nostrum.
-              </p>
-            </div>
+              <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
+                <div className="flex flex-wrap justify-between relative">
+                  <p className="font-semibold w-[80%] h-15">
+                    Amaliy mashg'ulotlarda qatnashing, sertifikatga ega bo'ling.
+                  </p>
+                  <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
+                    03
+                  </div>
+                </div>
 
-            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
-              <div className="flex flex-wrap justify-between relative">
-                <p className="font-semibold w-[80%] h-15">
-                  Berilgan darslarni o'rganib, vazifalarni bajarasiz.
+                <p className="text-sm mt-4 opacity-90">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+                  porro deserunt alias. Facilis, iusto placeat.
                 </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
-                  02
-                </div>
               </div>
-
-              <p className="text-sm mt-4 opacity-90">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                sint voluptas itaque nam, molestias modi.
-              </p>
-            </div>
-
-            <div className="rounded-2xl p-5  bg-base-100 hover:bg-base-200 border border-base-300">
-              <div className="flex flex-wrap justify-between relative">
-                <p className="font-semibold w-[80%] h-15">
-                  Amaliy mashg'ulotlarda qatnashing, sertifikatga ega bo'ling.
-                </p>
-                <div className="text-5xl font-semibold mr-1 absolute right-0 top-0 opacity-50">
-                  03
-                </div>
-              </div>
-
-              <p className="text-sm mt-4 opacity-90">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                porro deserunt alias. Facilis, iusto placeat.
-              </p>
             </div>
           </div>
-        </div>
-        {/* ------------------- */}
+          {/* ------------------- */}
 
-        {/* ------------------- */}
-        <div className="flex flex-col justify-center items-center w-full">
-          <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
-            <span>Platforma</span>
-            <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
-              Ko‘rsatkichlari
-            </span>
-          </h1>
+          {/* ------------------- */}
+          <div className="flex flex-col justify-center items-center w-full">
+            <h1 className="flex gap-1 text-2xl text-center font-bold uppercase">
+              <span>Platforma</span>
+              <span className="dark:bg-gray-50 text-gray-50 bg-gray-900 dark:text-gray-900 leading-snug px-2">
+                Ko‘rsatkichlari
+              </span>
+            </h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
-              <p className="font-bold text-xl">Umumiy o'quvchilar soni</p>
-              <span className="text-4xl font-extrabold mt-2">+12,265</span>
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
+              <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
+                <p className="font-bold text-xl">Umumiy o'quvchilar soni</p>
+                <span className="text-4xl font-extrabold mt-2">+12,265</span>
+              </div>
 
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
-              <p className="font-bold text-xl">Yozilgan darslar soni</p>
-              <span className="text-4xl font-extrabold mt-2">+265</span>
-            </div>
+              <div className="rounded-2xl py-8 flex flex-col justify-center items-center  bg-base-100 hover:bg-base-200 border border-base-300">
+                <p className="font-bold text-xl">Yozilgan darslar soni</p>
+                <span className="text-4xl font-extrabold mt-2">+265</span>
+              </div>
 
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center bg-base-100 hover:bg-base-200 border border-base-300 ">
-              <p className="font-bold text-xl">O'rtacha jamoaviy tajribaa</p>
-              <span className="text-4xl font-extrabold mt-2">+7 yil</span>
+              <div className="rounded-2xl py-8 flex flex-col justify-center items-center bg-base-100 hover:bg-base-200 border border-base-300 ">
+                <p className="font-bold text-xl">O'rtacha jamoaviy tajribaa</p>
+                <span className="text-4xl font-extrabold mt-2">+7 yil</span>
+              </div>
             </div>
           </div>
-        </div>
-        {/* ------------------- */}
+          {/* ------------------- */}
 
-        <div className="mt-12"></div>
+          <div className="mt-12"></div>
+        </div>
 
         <Footer />
       </div>
     </>
   );
 }
-
 export default Education;
+
