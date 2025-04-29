@@ -393,7 +393,7 @@ function Education() {
               <span className="text-4xl font-extrabold mt-2">+265</span>
             </div>
 
-            <div className="rounded-2xl py-8 flex flex-col justify-center items-center ">
+            <div className="rounded-2xl py-8 flex flex-col justify-center items-center bg-base-100 hover:bg-base-200 border border-base-300 ">
               <p className="font-bold text-xl">O'rtacha jamoaviy tajribaa</p>
               <span className="text-4xl font-extrabold mt-2">+7 yil</span>
             </div>
