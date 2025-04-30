@@ -9,18 +9,16 @@ function Footer() {
         <img src={Logo} alt="Logo" className="w-20" />
       </div>
 
-      <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-6 mt-15"> 
-        
-      <nav className="hidden md:flex justify-center gap-x-5 text-sm">
-  <a href="#">EDU</a>
-  <a href="#">Talk</a>
-  <a href="#">Webtoon</a>
-  <a href="#">Game</a>
-  <a href="#">Media</a>
-  <a href="#">Contest</a>
-</nav>
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center space-y-6 mt-12 sm:mt-1">
 
-
+        <nav className="hidden md:flex justify-center gap-x-5 text-sm">
+          <a href="#">EDU</a>
+          <a href="#">Talk</a>
+          <a href="#">Webtoon</a>
+          <a href="#">Game</a>
+          <a href="#">Media</a>
+          <a href="#">Contest</a>
+        </nav>
 
         <nav className="flex flex-wrap justify-center gap-6 text-sm">
           <a href="#">About us</a>
@@ -87,7 +85,7 @@ export default Footer
 //         </div>
 //       </div>
 
- 
+
 //     </footer>
 //   )
 // }
@@ -114,4 +112,4 @@ export default Footer
 // </div> */}
 
 
-   {/* <img src={Logo} alt="Logo" className="w-20" /> */}
+{/* <img src={Logo} alt="Logo" className="w-20" /> */ }

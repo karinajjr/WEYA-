@@ -41,24 +41,19 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 border border-gray-200 dark:border-gray-600 p-1 md:p-2 bg-base-200 bg-gradient-to-r to-[#eed9ed]/20 from-[#2ec05a]/5 dark:to-[#eed9ed]/10 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <div className="md:w-52 xl:w-72 border border-gray-200 dark:border-gray-400 p-1 md:p-2   rounded-md absolute md:static bottom-3 left-3 right-3">
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
-                <button
-                  onClick={() => {
-                    setSelectMenu(to);
-                  }}
-                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300
+                <button onClick={() => {  setSelectMenu(to);}}
+                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full transition-all duration-300
                 ${
                   selectMenu === to
-                    ? "bg-gradient-to-r from-[#eed9ed]/50 to-[#2ec05a]/20  dark:border-gray-600 dark:from-[#eed9ed]/10 border-gray-400"
-                    : "border-transparent"
+                    ? " bg-[#0EA5E9] text-white border-none"
+                    : "border-transparent "
                 }`}
                 >
-                  <i
-                    className={`bi ${icon} text-lg flex justify-center items-center`}
-                  ></i>
+                  <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                   <span className="text-[8px] md:text-[14px] text-nowrap">
                     {label}
                   </span>
@@ -68,7 +63,7 @@ function MyProfile() {
           </ul>
         </div>
 
-        <div className="w-[100%] p-4 flex-1 overflow-x-auto border border-gray-200 dark:border-gray-600 bg-base-200 bg-gradient-to-r to-[#eed9ed]/40 from-[#2ec05a]/10 dark:to-[#eed9ed]/10 rounded-md">
+        <div className="w-[100%] p-4 flex-1 overflow-x-auto border border-gray-200 dark:border-gray-400 rounded-md">
           {/* My Information */}
           <div
             className={`flex flex-col gap-2 ${
@@ -84,14 +79,8 @@ function MyProfile() {
                 </div>
 
                 <p className="mt-4  text-lg font-semibold">Zerda Jursinova</p>
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("my_profile_info_update")
-                      .showModal()
-                  }
-                  className="mt-4 btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 dark:border-gray-600 border-[#333] shadow-md  transition"
-                >
+                <button onClick={() => document .getElementById("my_profile_info_update") .showModal()  }
+                  className="mt-4 btn rounded-full shadow-md bg-[#0EA5E9] text-white transition"  >
                   Ma’lumotlarni o‘zgartirish
                 </button>
               </div>
@@ -126,7 +115,7 @@ function MyProfile() {
                 </p>
               </div>
               <div>
-                <button className="btn btn-sm rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 flex justify-center items-center gap-2">
+                <button className="btn btn-sm rounded-full bg-gradient-to-r bg-[#0EA5E9] text-white flex justify-center items-center gap-2">
                   <p className="text-nowrap">Change Password</p>
                   <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
                 </button>
@@ -144,33 +133,15 @@ function MyProfile() {
                 </p>
               </div>
               <div>
-                <label className="toggle text-base-content bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600">
+                <label className="toggle border-none text-white bg-[#0EA5E9]">
                   <input type="checkbox" />
-                  <svg
-                    aria-label="enabled"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
+                  <svg aria-label="enabled"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round"     strokeLinejoin="round"    >
                     <path d="M18 6 6 18" />
                     <path d="m6 6 12 12" />
                   </svg>
                   <svg
-                    aria-label="disabled"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <g
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      strokeWidth="4"
-                      fill="none"
-                      stroke="currentColor"
-                    >
+                    aria-label="disabled"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                    <g strokeLinejoin="round"  strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor" >
                       <path d="M20 6 9 17l-5-5"></path>
                     </g>
                   </svg>
