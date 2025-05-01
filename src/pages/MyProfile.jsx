@@ -45,13 +45,12 @@ function MyProfile() {
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
-                <button onClick={() => {  setSelectMenu(to);}}
+                <button onClick={() => { setSelectMenu(to); }}
                   className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full transition-all duration-300
-                ${
-                  selectMenu === to
-                    ? " bg-[#0EA5E9] text-white border-none"
-                    : "border-transparent "
-                }`}
+                ${selectMenu === to
+                      ? " bg-[#0EA5E9] text-white border-none"
+                      : "border-transparent "
+                    }`}
                 >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                   <span className="text-[8px] md:text-[14px] text-nowrap">
@@ -65,11 +64,7 @@ function MyProfile() {
 
         <div className="w-[100%] p-4 flex-1 overflow-x-auto border border-gray-200 dark:border-gray-400 rounded-md">
           {/* My Information */}
-          <div
-            className={`flex flex-col gap-2 ${
-              selectMenu === "my-info" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`}  >
             <div className="w-ful rounded-2xl p-2 bg-white dark:bg-[#111728]">
               <div className="bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
 
@@ -79,7 +74,7 @@ function MyProfile() {
                 </div>
 
                 <p className="mt-4  text-lg font-semibold">Zerda Jursinova</p>
-                <button onClick={() => document .getElementById("my_profile_info_update") .showModal()  }
+                <button onClick={() => document.getElementById("my_profile_info_update").showModal()}
                   className="mt-4 btn rounded-full shadow-md bg-[#0EA5E9] text-white transition"  >
                   Ma’lumotlarni o‘zgartirish
                 </button>
@@ -132,31 +127,30 @@ function MyProfile() {
                   mumkin.
                 </p>
               </div>
+
               <div>
-                <label className="toggle border-none text-white bg-[#0EA5E9]">
+                <label className="toggle text-base-content  border-none  bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
                   <input type="checkbox" />
-                  <svg aria-label="enabled"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round"     strokeLinejoin="round"    >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
+                  <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"  >
+                    <path d="M18 6 6 18" />  <path d="m6 6 12 12" />
                   </svg>
-                  <svg
-                    aria-label="disabled"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                    <g strokeLinejoin="round"  strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor" >
+                  <svg aria-label="disabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                    <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor" >
                       <path d="M20 6 9 17l-5-5"></path>
                     </g>
                   </svg>
                 </label>
               </div>
+
+              
             </div>
           </div>
 
           {/* My experience */}
-          <div
-            className={`${selectMenu === "my-experience" ? "block" : "hidden"}`}
-          >
+          <div className={`${selectMenu === "my-experience" ? "block" : "hidden"}`} >
             <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center mb-6">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-book-fill px-2 py-1 rounded-lg text-2xl mb-8"></i>
+                <i className="bi bi-book-fill px-2 py-1 rounded-lg text-[#0EA5E9] text-2xl mb-8"></i>
                 <div>
                   <h1 className="font-semibold   mb-1.5">
                     Sizda hali ta'lim tajribasi mavjud emas.
@@ -166,12 +160,8 @@ function MyProfile() {
                   </p>
                 </div>
 
-                <button
-                  className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 "
-                  onClick={() =>
-                    document.getElementById("add_education").showModal()
-                  }
-                >
+                <button className="btn rounded-full border-none bg-[#0EA5E9] text-white "
+                  onClick={() => document.getElementById("add_education").showModal()} >
                   Ta'lim qo'shish
                 </button>
               </div>
@@ -179,8 +169,7 @@ function MyProfile() {
 
             <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-briefcase-fill text-4xl px-2 py-2 rounded-lg  mb-8"></i>
-
+                <i className="bi bi-briefcase-fill text-4xl  text-[#0EA5E9]  px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
                   <h1 className="font-semibold mb-1.5">
                     Sizda hali ish tajribasi mavjud emas
@@ -190,12 +179,8 @@ function MyProfile() {
                   </p>
                 </div>
 
-                <button
-                  className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 "
-                  onClick={() =>
-                    document.getElementById("add_work_experience").showModal()
-                  }
-                >
+                <button className="btn rounded-full border-none bg-[#0EA5E9] text-white "
+                  onClick={() => document.getElementById("add_work_experience").showModal()} >
                   Ish tajribasi qo'shish
                 </button>
               </div>
@@ -203,15 +188,10 @@ function MyProfile() {
           </div>
 
           {/* My Certificate */}
-          <div
-            className={`${
-              selectMenu === "my-certificate" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`${selectMenu === "my-certificate" ? "block" : "hidden"}`} >
             <div className="w-full p-3 dark:bg-[#111728] bg-white rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
-                <i className="bi bi-award-fill text-4xl text-[#c9c9c9] px-2 py-2 rounded-lg  mb-8"></i>
-
+                <i className="bi bi-award-fill text-4xl  text-[#0EA5E9] px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
                   <h1 className="font-semibold mb-1.5">
                     Sizda hali sertifikatlar mavjud emas
@@ -221,7 +201,7 @@ function MyProfile() {
                     berilgan sertifikatlarni ko’rishingiz mumkin bo’ladi.
                   </p>
                 </div>
-                <button className="btn rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border-[#333] dark:border-gray-600 ">
+                <button className="btn rounded-full  bg-[#0EA5E9] text-white border-none">
                   Kurs sotib olish
                 </button>
               </div>
@@ -229,11 +209,7 @@ function MyProfile() {
           </div>
 
           {/* Payment History */}
-          <div
-            className={`${
-              selectMenu === "my-paymenthistory" ? "block" : "hidden"
-            }`}
-          >
+          <div className={`${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
             <h1 className="font-semibold p-2 text-xl">To'lovlar tarixi</h1>
             <div className="">
               <table className="table mt-4 p-6">
@@ -286,9 +262,7 @@ function MyProfile() {
           </div>
 
           {/* My Devices */}
-          <div
-            className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}
-          >
+          <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}  >
             <div>
               <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
               <p className="text-[#7F868B] mt-4 font-light text-[13px]">

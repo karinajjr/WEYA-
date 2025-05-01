@@ -8,16 +8,6 @@ import il from "../../public/assets/il.png"
 function Education() {
   const courses = [
     {
-      id: 1,
-      view: 20,
-      category: "Frontend",
-      title: "React Basics",
-      mentor: "John Doe",
-      image:
-        "https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75",
-      text: "Learn the fundamentals of React, including components, state management, and hooks.",
-    },
-    {
       id: 2,
       view: 20,
       category: "Frontend",
@@ -153,124 +143,136 @@ function Education() {
         {/* ------------------- */}
 
         {/* ------------------- */}
-        <div className="flex flex-col justify-center items-center">
-          <h1 className="flex gap-1 text-2xl text-center font-medium  uppercase">
-            courses
-          </h1>
-          <div className="my-6 flex flex-wrap justify-center items-center gap-4 px-2 py-2 rounded-full bg-base-200 bg-gradient-to-r dark:bg-[#082F49] shadow">
-            {categories.map((category) => (
-              <button key={category}
-                className={`btn btn-sm rounded-full border-none transition-all duration-300 font-normal  ${selectedCategory === category
-                  ? " bg-gradient-to-r bg-[#0EA5E9] text-white"
-                  : " bg-gradient-to-l bg-base-300 dark:bg-[#0369A1]"
-                  }`} onClick={() => setSelectedCategory(category)} >
-                {category}
-              </button>
-            ))}
-          </div>
+        <div>
+          <div className="flex flex-col items-center ">
+            <h1 className="flex gap-1 text-2xl text-center font-medium  uppercase">
+              courses
+            </h1>
 
-          <div className="justify-center items-center grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  2xl:grid-cols-4 gap-8 w-full">
-            {courses
-              .filter((course) => course.category === selectedCategory)
-              .map((course) => (
-                <div key={course.id}
-                  className="border border-gray-200 dark:border-gray-400 rounded-lg overflow-hidden bg-base-200 dark:bg-[#1E293B]"  >
-                  <NavLink to="select-course">
-                    <img src={course.image} className="w-full h-48 object-cover" />
-                  </NavLink>
-                  <div className="p-3 md:p-4">
+            <div className="my-6 flex flex-wrap justify-center items-center gap-4 px-2 py-2 rounded-full bg-base-200 bg-gradient-to-r dark:bg-[#082F49] shadow">
+              {categories.map((category) => (
+                <button key={category}
+                  className={`btn btn-sm rounded-full border-none transition-all duration-300 font-normal  ${selectedCategory === category
+                    ? " bg-gradient-to-r bg-[#0EA5E9] text-white"
+                    : " bg-gradient-to-l bg-base-300 dark:bg-[#0369A1]"
+                    }`} onClick={() => setSelectedCategory(category)} >
+                  {category}
+                </button>
+              ))}
+            </div>
 
-                    <div className="flex justify-between ">
-                      <h3 className="text-xl font-semibold mb-2">
-                        {course.title}
-                      </h3>
-                      <h3 className="text-xl font-semibold mb-2">34$</h3>
-                    </div>
+            <div className="justify-center  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  2xl:grid-cols-4 gap-8 w-full">
+              {courses
+                .filter((course) => course.category === selectedCategory)
+                .map((course) => (
+                  <div key={course.id}
+                    className="border border-gray-200 dark:border-gray-400 rounded-lg overflow-hidden bg-base-200 dark:bg-[#1E293B]"  >
+                    <NavLink to="select-course">
+                      <img src={course.image} className="w-full h-48 object-cover" />
+                    </NavLink>
+                    <div className="p-3 md:p-4">
 
-                    <p className="text-xs opacity-60 dark:opacity-90">{course.text}</p>
-
-                    <div className="flex justify-between  ">
-
-
-
-                      <div class="flex items-center gap-1 mt-4 ">
-                        <span class="font-medium text-transparent bg-gradient-to-r from-[#FF0000]/60  to-[#FDCF58] bg-clip-text transition-all duration-300 mr-0.5">
-                          4.8
-                        </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
-                          <defs>
-                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#FF0000" />
-                              <stop offset="100%" stopColor="#FDCF58" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
-                        </svg>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
-                          <defs>
-                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#FF0000" />
-                              <stop offset="100%" stopColor="#FDCF58" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
-                        </svg>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
-                          <defs>
-                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#FF0000" />
-                              <stop offset="100%" stopColor="#FDCF58" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
-                        </svg>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
-                          <defs>
-                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#FF0000" />
-                              <stop offset="100%" stopColor="#FDCF58" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" fill="url(#starGradient)" />
-                        </svg>
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
-                          <defs>
-                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#FF0000" />
-                              <stop offset="100%" stopColor="#FDCF58" />
-                            </linearGradient>
-                          </defs>
-                          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" fill="url(#starGradient)" />
-                        </svg>
+                      <div className="flex justify-between ">
+                        <h3 className="text-xl font-semibold mb-2">
+                          {course.title}
+                        </h3>
+                        <h3 className="text-xl font-semibold mb-2">34$</h3>
                       </div>
 
-                      <div className="flex items-center gap-1.5 opacity-60  dark:opacity-90 mt-4">
-                        <i class="bi bi-eye text-lg mt-0.5"></i>
-                        <p className="text-sm">{course.view}</p>
+                      <p className="text-xs opacity-60 dark:opacity-90">{course.text}</p>
+
+                      <div className="flex justify-between  ">
+
+
+
+                        <div class="flex items-center gap-1 mt-4 ">
+                          <span class="font-medium text-transparent bg-gradient-to-r from-[#FF0000]/60  to-[#FDCF58] bg-clip-text transition-all duration-300 mr-0.5">
+                            4.8
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" fill="url(#starGradient)" />
+                          </svg>
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" fill="url(#starGradient)" />
+                          </svg>
+
+
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16"   >
+                            <defs>
+                              <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#FF0000" />
+                                <stop offset="100%" stopColor="#FDCF58" />
+                              </linearGradient>
+                            </defs>
+                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" fill="url(#starGradient)" />
+                          </svg>
+                        </div>
+
+                        <div className="flex items-center gap-1.5 opacity-60  dark:opacity-90 mt-4">
+                          <i class="bi bi-eye text-lg mt-0.5"></i>
+                          <p className="text-sm">{course.view}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex mt-4">
-                      <NavLink to="select-course" className="uppercase bg-[#0EA5E9] btn w-full rounded-lg text-white border-none">
-                        Go to Course
-                      </NavLink>
+                      <div className="flex mt-4">
+                        <NavLink to="select-course" className="uppercase bg-[#0EA5E9] btn w-full rounded-lg text-white border-none">
+                          Go to Course
+                        </NavLink>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
+          </div>
+
+          <div className="mt-4 flex justify-end w-full">
+            <button className="flex items-center gap-2 text-[#0EA5E9]">
+              <h2 className="">See more</h2>
+              <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
+
+
+
         <div>
-
-
           {/* ------------------- */}
 
           {/* LEADING TEACHERS ------------------- START */}
-          <div className="flex flex-col justify-center items-center my-12">
+          <div>
+          <div className="flex flex-col justify-center items-center mt-10">
             <h1 className="flex gap-1 text-2xl text-center font-medium uppercase">
               <span>Yetakchi o‘qituvchilar</span>
             </h1>
@@ -291,13 +293,21 @@ function Education() {
                     </div>
                   </div>
 
-                  <div className="btn btn-circle bg-none p-2 border border-gray-200 dark:border-gray-400  hover:bg-sky-500 group">
+                  <div className="btn btn-circle bg-transparent  p-2 border border-gray-200 dark:border-gray-400  hover:bg-sky-500 group">
                     <i className="bi bi-arrow-up-right flex justify-center items-center text-[#152C70] dark:text-gray-50 group-hover:text-gray-50"></i>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+          <div className="mt-4  mb-6 flex justify-end w-full">
+            <button className="flex items-center gap-2 text-[#0EA5E9]">
+              <h2 className="">See more</h2>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+          </div>
+      
           {/* LEADING TEACHERS ------------------- END */}
 
           {/* POPULAR DESTINATIONS ------------------- START */}
@@ -317,7 +327,7 @@ function Education() {
                     </div>
                   </div>
 
-                  <div className="btn btn-circle p-2 border border-gray-200 dark:border-gray-400 hover:bg-sky-500 group">
+                  <div className="btn btn-circle bg-transparent p-2 border border-gray-200 dark:border-gray-400 hover:bg-sky-500 group">
                     <i className="bi bi-arrow-up-right flex justify-center items-center text-[#152C70] dark:text-gray-50 group-hover:text-gray-50"></i>
                   </div>
                 </div>
