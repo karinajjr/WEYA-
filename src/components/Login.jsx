@@ -18,17 +18,11 @@ function Login() {
           <ThemeSwitcher />
         </div>
 
-        <div className="bg-[#0EA5E9] flex flex-col items-center justify-center w-full hidden md:flex">
-          <img src={Logo} alt="Logo" className="w-40 mb-5" />
-          <h2 className="text-white font-bold text-5xl mt-4 text-center">
-            Xush <br />
-            Kelibsiz!
-          </h2>
-        </div>
+    
 
 
 
-        <div className="bg-white  flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full">
 
 
           <div className="border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">

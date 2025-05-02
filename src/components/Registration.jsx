@@ -41,17 +41,11 @@ function Registration() {
           <ThemeSwitcher />
         </div>
 
-        <div className="bg-[#0EA5E9] flex flex-col items-center justify-center w-full hidden md:flex h-screen">
-          <img src={Logo} alt="Logo" className="w-40 mb-5" />
-          <h2 className="text-white font-bold text-5xl mt-4 text-center">
-            Xush <br />
-            Kelibsiz!
-          </h2>
-        </div>
+
 
 
         {registrationType === "" && (
-          <div className="bg-white  flex items-center justify-center w-full h-screen">
+          <div className="  flex items-center justify-center w-full h-screen">
 
             <div className=" border-none bg-white dark:bg-gray-800 rounded-2xl px-10 py-12 shadow sm:w-[450px]">
               <div className="text-center mb-12">
@@ -171,24 +165,18 @@ function Registration() {
         {registrationType === "company" && (
           <div className=" h-screen w-full flex items-center justify-center ">
 
-            <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow">
+            <div className="max-w-md mx-auto p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
               <h2 className="text-2xl font-medium text-center mb-6">Ro’yxatdan o’tish</h2>
+ 
+              <ul className="steps w-full ">
+                <li onClick={() => setStep(1)} className={`step cursor-pointer ${step >= 1 ? 'step-primary before:!bg-sky-500 after:!bg-sky-500 before:!border-none after:!border-none !border-none before:!text-white after:!text-white' : ''}`} >
+                  Kontakt ma’lumotlari
+                </li>
+                <li onClick={() => setStep(2)} className={`step cursor-pointer ${step >= 2 ? 'step-primary before:!bg-sky-500  after:!bg-sky-500 before:!border-none after:!border-none !border-none  before:!text-white after:!text-white' : ''}`}>
+                  Kompaniya ma’lumotlari
+                </li>
+              </ul>
 
-              <div className="flex justify-between mb-6">
-                <div onClick={() => setStep(1)} className={`flex-1 text-center cursor-pointer ${step === 1 ? 'text-[#0EA5E9] font-bold' : 'text-[#9CA3AF]'}`} >
-                  <div className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center  ${step === 1 ? 'bg-[#0EA5E9] text-white' : 'bg-[#9CA3AF] text-white'}`}>
-                    1
-                  </div>
-                  <p className="mt-2 text-sm">Kontakt ma’lumotlari</p>
-                </div>
-
-                <div onClick={() => setStep(2)} className={`flex-1 text-center cursor-pointer ${step === 2 ? 'text-[#0EA5E9] font-bold' : 'text-[#9CA3AF]'}`} >
-                  <div className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center ${step === 2 ? 'bg-[#0EA5E9] text-white' : 'bg-[#9CA3AF] text-white'}`}>
-                    2
-                  </div>
-                  <p className="mt-2 text-sm">Kompaniya ma’lumotlari</p>
-                </div>
-              </div>
 
               {step === 1 && (
                 <div>
@@ -249,7 +237,7 @@ function Registration() {
               )}
 
               {step === 2 && (
-                <div className="">
+                <div className=" ">
                   <div className=" mt-3">
                     <p className="text-xs font-medium mb-1">Email</p>
                     <label className="input w-full border-none bg-[#F7F8F9] dark:bg-[#020617] shadow">
@@ -354,13 +342,11 @@ function Registration() {
               </div>
               <div className="w-full flex gap-2 mt-4">
 
-                <button
-                  onClick={() => setStep(step === 1 ? 2 : 1)}
+                <button onClick={() => setStep(step === 1 ? 2 : 1)}
                   className={`w-full py-2 rounded ${step === 1
-                      ? 'bg-[#0EA5E9] text-white'
-                      : 'bg-[#E0F2FE] text-[#0EA5E9]'
-                    }`}
-                >
+                    ? 'bg-[#0EA5E9] text-white'
+                    : 'bg-[#E0F2FE] text-[#0EA5E9]'
+                    }`}>
                   {step === 1 ? 'Keyingisi' : 'Orqaga'}
                 </button>
 
@@ -373,7 +359,6 @@ function Registration() {
 
 
               </div>
-
 
               <div className={`flex justify-between gap-30 mt-3  ${showInfo === true ? "hidden" : ""}`}  >
                 <p className="text-xs text-black/50 dark:text-gray-50">

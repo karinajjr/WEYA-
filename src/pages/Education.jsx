@@ -124,9 +124,10 @@ function Education() {
         {/* ------------------- */}
         <div className="flex justify-between">
           <div className=" my-12">
-            <h1 className="text-7xl">STUDY <span className="bg-[#0EA5E9] text-white px-3 font-medium">ABROAD</span> IS <br />
+          <img src={il} className="w-90 block sm:hidden mx-auto" alt="" />
+          <h1 className="text-5xl md:text-6xl lg:text-7xl ">STUDY <span className="bg-[#0EA5E9] text-white px-3 font-medium">ABROAD</span> IS <br />
               EASY WITH US</h1>
-            <h1 className=" mt-2">
+            <h1 className="text-md mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias <br /> soluta tenetur perspiciatis corrupti fugit rerum eaque quo dolorem repellendus.</h1>
 
             <button className="uppercase border-none btn btn-lg rounded-full font-medium shadow-none bg-[#0EA5E9] text-white  mt-3 ">
@@ -135,7 +136,7 @@ function Education() {
           </div>
 
           <div>
-            <img src={il} className="w-120" alt="" />
+            <img src={il} className="w-120 hidden sm:block md:mt-8 sm:mt-10"  alt="" />
           </div>
 
         </div>
@@ -166,7 +167,10 @@ function Education() {
                 .filter((course) => course.category === selectedCategory)
                 .map((course) => (
                   <div key={course.id}
-                    className="border border-gray-200 dark:border-gray-400 rounded-lg overflow-hidden bg-base-200 dark:bg-[#1E293B]"  >
+                    className="border border-gray-200 dark:border-gray-400 rounded-lg overflow-hidden bg-base-200 dark:bg-[#1E293B] relative"  >
+                      <div className="absolute bg-sky-500 px-1 py-2 w-[120px] rounded-br-xl flex justify-center items-center text-white font-semibold">
+                        <span className="uppercase text-xs">Yangi</span>
+                      </div>
                     <NavLink to="select-course">
                       <img src={course.image} className="w-full h-48 object-cover" />
                     </NavLink>
@@ -185,8 +189,8 @@ function Education() {
 
 
 
-                        <div class="flex items-center gap-1 mt-4 ">
-                          <span class="font-medium text-transparent bg-gradient-to-r from-[#FF0000]/60  to-[#FDCF58] bg-clip-text transition-all duration-300 mr-0.5">
+                        <div className="flex items-center gap-1 mt-4 ">
+                          <span className="font-medium text-transparent bg-gradient-to-r from-[#FF0000]/60  to-[#FDCF58] bg-clip-text transition-all duration-300 mr-0.5">
                             4.8
                           </span>
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
@@ -242,7 +246,7 @@ function Education() {
                         </div>
 
                         <div className="flex items-center gap-1.5 opacity-60  dark:opacity-90 mt-4">
-                          <i class="bi bi-eye text-lg mt-0.5"></i>
+                          <i className="bi bi-eye text-lg mt-0.5"></i>
                           <p className="text-sm">{course.view}</p>
                         </div>
                       </div>
@@ -260,7 +264,7 @@ function Education() {
           <div className="mt-4 flex justify-end w-full">
             <button className="flex items-center gap-2 text-[#0EA5E9]">
               <h2 className="">See more</h2>
-              <i class="bi bi-arrow-right"></i>
+              <i className="bi bi-arrow-right"></i>
             </button>
           </div>
         </div>
@@ -280,6 +284,7 @@ function Education() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full">
               {[...Array(6).keys()].map((i) => (
                 <div className="p-6 flex justify-between items-center rounded-xl border border-gray-200 dark:border-gray-400 hover:bg-base-200">
+                  
                   <div className="flex gap-3 items-center">
                     <div className="avatar ">
                       <div className="w-14 rounded-full">
@@ -303,7 +308,7 @@ function Education() {
           <div className="mt-4  mb-6 flex justify-end w-full">
             <button className="flex items-center gap-2 text-[#0EA5E9]">
               <h2 className="">See more</h2>
-              <i class="bi bi-arrow-right"></i>
+              <i className="bi bi-arrow-right"></i>
             </button>
           </div>
           </div>
