@@ -29,3 +29,7 @@ html {
     -webkit-text-fill-color: black !important;
   }
 }
+
+.radial-progress::after {
+  display: none;
+}
