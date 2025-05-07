@@ -62,7 +62,7 @@ function MyProfile() {
           </ul>
         </div>
 
-        <div className="w-[100%] p-4 flex-1 overflow-x-auto border border-gray-200 dark:border-gray-400 rounded-md">
+        <div className="w-[100%]  flex-1 overflow-x-auto rounded-md">
           {/* My Information */}
           <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`}  >
             <div className="w-ful rounded-2xl p-2 bg-white dark:bg-[#111728]">
@@ -142,7 +142,7 @@ function MyProfile() {
                 </label>
               </div>
 
-              
+
             </div>
           </div>
 
@@ -209,61 +209,152 @@ function MyProfile() {
           </div>
 
           {/* Payment History */}
-          <div className={`${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
-            <h1 className="font-semibold p-2 text-xl">To'lovlar tarixi</h1>
-            <div className="">
-              <table className="table mt-4 p-6">
-                <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl boeder-none">
-                  <tr className="text-[#6eb4fb] border-none rounded-xl ">
-                    <th>
-                      KURS NOMI
-                      <i className="bi bi-caret-down-fill"></i>
-                    </th>
-                    <th>
-                      SANA
-                      <i className="bi bi-caret-down-fill"></i>
-                    </th>
-                    <th>
-                      QIYMAT
-                      <i className="bi bi-caret-down-fill"></i>
-                    </th>
-                    <th>
-                      TO'LOV TURI
-                      <i className="bi bi-caret-down-fill"></i>
-                    </th>
-                    <th>
-                      STATUS
-                      <i className="bi bi-caret-down-fill"></i>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-none">
-                    <td>
-                      <span className="block text-nowrap">
-                        Professional Node.JS
-                      </span>
-                      <span className="text-nowrap">
-                        Noldan boshlab eʼlonlar sayti yaratishni oʻrganing!
-                      </span>
-                    </td>
-                    <td>
-                      <span className="text-nowrap">28.11.2024</span>
-                    </td>
-                    <td className="text-[#3F9CFB]">
-                      <span className="text-nowrap">247.000 so'm</span>
-                    </td>
-                    <td className="text-nowrap">Bir martalik toʻlov</td>
-                    <td className="text-[#FDC724]">Jarayonda</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div className={` ${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
+            <div className="bg-white dark:bg-[#111728] p-2  rounded-xl">
+              <h1 className="font-semibold p-2 text-xl mb-1">To'lovlar tarixi</h1>
+              <div className=" ">
+
+                <div className="hidden md:block">
+                  <table className="table mt-4 p-6 ">
+                    <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl boeder-none">
+                      <tr className="text-[#6eb4fb] border-none rounded-xl ">
+                        <th>
+                          KURS NOMI
+                          <i className="bi bi-caret-down-fill"></i>
+                        </th>
+                        <th>
+                          SANA
+                          <i className="bi bi-caret-down-fill"></i>
+                        </th>
+                        <th>
+                          QIYMAT
+                          <i className="bi bi-caret-down-fill"></i>
+                        </th>
+                        <th>
+                          TO'LOV TURI
+                          <i className="bi bi-caret-down-fill"></i>
+                        </th>
+                        <th>
+                          STATUS
+                          <i className="bi bi-caret-down-fill"></i>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-none">
+                        <td>
+                          <span className="block text-black dark:text-white">
+                            Professional Node.JS
+                          </span>
+                          <span className="text-black dark:text-white">
+                            Noldan boshlab eʼlonlar sayti yaratishni oʻrganing!
+                          </span>
+                        </td>
+                        <td>
+                          <span className="text-black dark:text-white">28.11.2024</span>
+                        </td>
+                        <td className="text-[#3F9CFB]">
+                          <span>247.000 so'm</span>
+                        </td>
+                        <td className="text-black dark:text-white">Bir martalik toʻlov</td>
+                        <td className="text-[#FDC724]">Jarayonda</td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
+
+
+                <div className=" block md:hidden space-y-3">
+                  <table class=" min-w-full border border-gray-200">
+                    <tbody>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class=" min-w-full border border-gray-200">
+                    <tbody>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class=" min-w-full border border-gray-200">
+                    <tbody>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+                      </tr>
+                      <tr class="border-b border-gray-200">
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+
+
+
+              </div>
             </div>
           </div>
 
           {/* My Devices */}
           <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}  >
-            <div>
+
+          <div className="bg-white dark:bg-[#111728] p-3 rounded-xl hidden md:block ">
+          <div>
               <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
               <p className="text-[#7F868B] mt-4 font-light text-[13px]">
                 Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
@@ -332,8 +423,67 @@ function MyProfile() {
               </table>
             </div>
           </div>
-        </div>
-      </section>
+
+
+            <div className="bg-white dark:bg-[#111728] rounded-xl p-4 block md:hidden">
+              <div>
+                <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
+                <p className="text-slate-500 dark:text-slate-100 mt-4 font-light text-[13px]">
+                  Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
+                  olishingiz mumkin.
+                  Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud
+                  ikkita qurilmalardan birini oʻchirishingiz kerak.
+                </p>
+              </div>
+
+              <div className="bg-[#FFFCF9] dark:bg-[#FFE1C4] px-3 py-2 rounded-xl mt-4 flex">
+                <i className="bi bi-exclamation-octagon text-2xl flex items-center text-[#FF7A00]  mr-3"></i>
+                <h1 className="text-[#1A202C]">
+                  Faqatgina <span className="text-sky-500 font-medium">2 ta </span>  qurilmadan <br /> kirishingiz mumkin.
+                </h1>
+              </div>
+
+              <div className="mt-6 border border-slate-200 border-sl px-4 py-4 rounded-xl">
+                <div className="flex ">
+                  <i className="bi bi-laptop p-4 rounded-md text-xl inline-flex items-center justify-center text-white bg-sky-500 "></i>
+                  <div className="ml-3">
+                    <h1 className="font-medium text-nowrap">
+                      Mac OS 10.15.7, Chrome 133
+                    </h1>
+                    <p className="text-slate-500 dark:text-slate-100 text-xs">Mazkur qurilma : <span>17:02:18, 05.05.2025</span></p>
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <button className="btn border-none flex justify-center items-center w-full bg-[#FFEEEE] dark:bg-[#FFD3D3]" onClick={() => document.getElementById("delete_device").showModal()} >
+                    <i className="bi bi-trash-fill flex justify-center items-center text-[#E52A12] md:text-md"></i>
+                    <span className="text-[#E52A12] md:text-xl font-normal">Delete</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6 border border-slate-200 border-sl px-4 py-4 rounded-xl">
+                <div className="flex ">
+                  <i className="bi bi-phone p-4 rounded-md text-xl inline-flex items-center justify-center text-white bg-sky-500 "></i>
+                  <div className="ml-3">
+                    <h1 className="font-medium text-nowrap">
+                      Mac OS 10.15.7, Chrome 133
+                    </h1>
+                    <p className="text-slate-500 dark:text-slate-100 text-xs">Mazkur qurilma : <span>17:02:18, 05.05.2025</span></p>
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <button className="btn border-none flex justify-center items-center w-full bg-[#FFEEEE] dark:bg-[#FFD3D3]" onClick={() => document.getElementById("delete_device").showModal()} >
+                    <i className="bi bi-trash-fill flex justify-center items-center text-[#E52A12] md:text-md"></i>
+                    <span className="text-[#E52A12] md:text-xl font-normal">Delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div >
+      </section >
     </>
   );
 }

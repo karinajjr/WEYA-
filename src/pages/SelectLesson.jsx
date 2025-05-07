@@ -4,6 +4,7 @@ import BuyModal from "../components/BuyModal";
 const courses = [
   {
     title: " Backend",
+    progress: 40,
     lessons: [
       { name: "Lesson 1", progress: 0, locked: false },
       { name: "Lesson 2", price: "30 000", locked: true },
@@ -13,6 +14,7 @@ const courses = [
   },
   {
     title: "Backend",
+    progress: 30,
     lessons: [
       { name: "Lesson 5", price: "30 000", locked: true },
       { name: "Lesson 6", price: "30 000", locked: true },
@@ -22,6 +24,7 @@ const courses = [
   },
   {
     title: "Backend",
+    progress: 10,
     lessons: [
       { name: "Lesson 9", price: "30 000", locked: true },
       { name: "Lesson 10", price: "30 000", locked: true },
@@ -31,6 +34,7 @@ const courses = [
   },
   {
     title: "Backend",
+    progress: 0,
     lessons: [
       { name: "Lesson 13", price: "30 000", locked: true },
       { name: "Lesson 14", price: "30 000", locked: true },
@@ -40,6 +44,7 @@ const courses = [
   },
   {
     title: "Backend",
+    progress: 0,
     lessons: [
       { name: "Lesson 17", price: "30 000", locked: true },
       { name: "Lesson 18", price: "30 000", locked: true },
@@ -85,7 +90,6 @@ function SelectLesson() {
           <div className="flex justify-between items-center mb-4">
             <div className="flex gap-3">
 
-
               <div className="flex items-center justify-center relative h-[50px] w-[50px]">
                 <div className="radial-progress text-gray-200 h-[50px] w-[50px] absolute [--thickness:3px] noround"
                   style={{ "--value": 100, }}>
@@ -122,8 +126,8 @@ function SelectLesson() {
 
                     <div
                       className="radial-progress text-sky-500 h-[50px] w-[50px] absolute [--thickness:4px] noround"
-                      style={{ "--value": 20, }}>
-                      20%
+                      style={{ "--value": course.progress }}>
+                      {course.progress}%
                     </div>
                   </div>
                   <div>
@@ -140,7 +144,7 @@ function SelectLesson() {
                       onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
 
                       <span className='flex items-center'>
-                      <i className="bi bi-check2-circle px-1.5 text-sky-500"></i>
+                        <i className="bi bi-check2-circle px-1.5 text-sky-500"></i>
                         <span className='ml-2 font-normal'>{lesson.name}</span>
                       </span>
                     </div>
@@ -158,22 +162,16 @@ function SelectLesson() {
               <h3 className="text-xl font-semibold"> Express Backend</h3>
             </div>
 
-
             <div className="flex gap-1">
               <button className="btn border-none bg-sky-500 text-white">
                 <span>Next lesson</span>
                 <i className="bi bi-chevron-right flex justify-center items-center text-xs"></i>
               </button>
-
-
-              <button className="btn bg-sky-500 rounded-full block lg:hidden"
+              <button className="btn border-none bg-sky-500 rounded-full block lg:hidden"
                 onClick={() => setView("left")} >
                 <i class="bi bi-list-nested text-white"></i>
               </button>
             </div>
-
-
-
 
           </div>
 
@@ -182,15 +180,18 @@ function SelectLesson() {
           </div>
 
           <div className="tabs tabs-lift mt-4 dark:border-white">
-            <label className="tab flex justify-center items-center gap-2 ">
+            <label className="tab flex justify-center items-center gap-2  hover:text-sky-500 ">
               <input type="radio" name="my_tabs_4" />
               <i class="bi bi-patch-question flex justify-center items-center text-[16px]"></i>
-              <span className="text-[16px] leading-none hover:text-sky-500">Q & A</span>
+              <span className=" text-[16px] leading-none ">Q & A</span>
             </label>
             <div className="tab-content bg-base-100 border-base-300 p-6">
+              <div>
               <span className="text-xl font-semibold">
-                Questions and Answers
+                Savol va javoblar
               </span>
+              </div>
+             
               <p className="mt-2">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Molestias fuga libero dolorem ratione inventore, totam
@@ -208,7 +209,7 @@ function SelectLesson() {
               </p>
             </div>
 
-            <label className="tab flex justify-center items-center gap-2 ">
+            <label className="tab flex justify-center items-center gap-2 hover:text-sky-500 ">
               <input type="radio" name="my_tabs_4" defaultChecked />
               <i class="bi bi-files flex justify-center items-center text-[16px]"></i>
               <span className="text-[16px] leading-none">Sources</span>
@@ -225,7 +226,7 @@ function SelectLesson() {
               </p>
             </div>
 
-            <label className="tab flex justify-center items-center gap-2">
+            <label className="tab flex justify-center items-center gap-2  hover:text-sky-500">
               <input type="radio" name="my_tabs_4" />
               <i class="bi bi-chat-right-text flex justify-center items-center text-[16px]"></i>
               <span className="text-[16px] leading-none">Comments</span>
