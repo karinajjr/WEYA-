@@ -1,61 +1,56 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../public/assets/logo/weya_plus.png";
-import ThemeSwitcher from "./ThemeSwitcher";
+import ThemeSwitcher from "../ui/ThemeSwitcher";
+import Logo from "../ui/Logo";
 
 function Navbar() {
   return (
     <>
-      <div className="container mx-auto px-3 sticky top-1 my-3 z-15">
-
-        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] bg-gray-300/20 backdrop-blur-md">
-
-          <NavLink to="/">
-            <img src={logo} alt="LOGO" className="w-[70px] cursor-pointer" />
-          </NavLink>
+      <div className="container mx-auto px-3 sticky top-1 my-3 z-15 text-gray-900 dark:text-gray-50">
+        <div className="w-full rounded-full px-[25px] flex justify-between items-center h-[50px] bg-white dark:bg-gray-900 shadow shadow-gray-300 dark:shadow-gray-900">
+          <div>
+            <Logo />
+          </div>
 
           <div>
-            <ul className="font-medium hidden md:flex items-center justify-center gap-6 text-[14px] lg:text-[16px] text-gray-900 dark:text-gray-50">
+            <ul className="font-medium hidden md:flex items-center justify-center gap-6 text-[14px] lg:text-[16px]">
               <li>
-                <NavLink to="education">
-                  EDU
-                </NavLink>
+                <NavLink to="education">EDU</NavLink>
               </li>
-              <li className="opacity-60">
-                <NavLink to="">
-                  Talk
-                </NavLink>
+              <li className="opacity-50">
+                <NavLink to="">Talk</NavLink>
               </li>
-              <li className="opacity-60">
-                <NavLink to="">
-                  Webtoon
-                </NavLink>
+              <li className="opacity-50">
+                <NavLink to="">Webtoon</NavLink>
               </li>
-              <li className="opacity-60">
-                <NavLink to="">
-                  Game
-                </NavLink>
+              <li className="opacity-50">
+                <NavLink to="">Game</NavLink>
               </li>
-              <li className="opacity-60">
-                <NavLink to="">
-                  Media
-                </NavLink>
+              <li className="opacity-50">
+                <NavLink to="">Media</NavLink>
               </li>
             </ul>
           </div>
 
           <div className="flex gap-2 items-center">
-            <NavLink to="login" className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-gray-900 text-gray-50 dark:bg-gray-50 dark:text-gray-900" >
+            <NavLink
+              to="login"
+              className="btn btn-sm border-none btn-circle w-[80px] flex justify-center items-center bg-sky-500 text-gray-50"
+            >
               <span className="text-[13px]">Login</span>
             </NavLink>
 
-            <div className="dropdown dropdown-end text-gray-900 dark:text-gray-50">
-              <div tabIndex={0} role="button" className="btn btn-circle bg-transparent border-none shadow-none" >
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-circle bg-transparent border-none shadow-none"
+              >
                 <i className="bi bi-list text-[24px] flex justify-center items-center"></i>
               </div>
 
               <ul
                 tabIndex={0}
-                className="dropdown-content menu rounded-md w-72 p-2 mt-2 -mr-6 shadow-sm border border-gray-300 dark:border-gray-600 bg-base-200 bg-gradient-to-r from-[#eed9ed]/60 dark:from-[#eed9ed]/10 to-[#2ec05a]/10"
+                className="dropdown-content menu rounded-md w-72 p-2 mt-2 -mr-6 bg-white dark:bg-gray-900 shadow shadow-gray-300 dark:shadow-gray-950"
               >
                 <div className="p-2 flex gap-2">
                   <img
@@ -85,21 +80,30 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li
+                  className="tooltip tooltip-left opacity-50"
+                  data-tip="Block"
+                >
                   <span>
                     <i className="bi bi-chat-quote text-[18px] flex justify-center items-center"></i>
                     <a>Talk</a>
                   </span>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li
+                  className="tooltip tooltip-left opacity-50"
+                  data-tip="Block"
+                >
                   <span>
                     <i className="bi bi-people text-[18px] flex justify-center items-center"></i>
                     <a>Webtoon</a>
                   </span>
                 </li>
 
-                <li className="tooltip tooltip-left" data-tip="Block">
+                <li
+                  className="tooltip tooltip-left opacity-50"
+                  data-tip="Block"
+                >
                   <span>
                     <i className="bi bi-controller text-[18px] flex justify-center items-center"></i>
                     <a>Game</a>
@@ -107,7 +111,10 @@ function Navbar() {
                 </li>
 
                 <li>
-                  <span className="tooltip tooltip-left" data-tip="Block">
+                  <span
+                    className="tooltip tooltip-left opacity-50"
+                    data-tip="Block"
+                  >
                     <i className="bi bi-cast text-[18px] flex justify-center items-center"></i>
                     <a>Media</a>
                   </span>

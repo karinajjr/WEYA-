@@ -14,8 +14,8 @@ function MyProfileInfoUpdate() {
 
             <div className="">
               <div className="flex gap-2">
-                <button className="btn btn-sm w-20 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Upload </button>
-                <button className="btn btn-sm w-20 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Delete </button>
+              <button className="btn btn-sm w-20 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Upload </button>
+              <button className="btn btn-sm w-20 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Delete </button>
               </div>
               <p className="text-xs opacity-50 mt-2">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
@@ -87,8 +87,8 @@ function MyProfileInfoUpdate() {
             </fieldset>
           </div>
           <div className="modal-action w-full flex justify-end">
-            <button className="btn w-24 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Save </button>
-            <button onClick={() => { document.getElementById("my_profile_info_update").close() }} className="btn w-24 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Close </button>
+          <button className="btn w-24 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Save </button>
+          <button onClick={()=> { document.getElementById("my_profile_info_update").close() }} className="btn w-24 rounded-full bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 border border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600" > Close </button>
           </div>
         </div>
         <form method="dialog" className="modal-backdrop">

@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
-import ThemeSwitcher from "./ThemeSwitcher";
-import GoogleIcon from "/assets/logo/google_icon.png";
+import { useState, useEffect } from "react";
+import ThemeSwitcher from "../ui/ThemeSwitcher";
+import GoogleIcon from "../../assets/icons/google.png";
 import { NavLink } from "react-router-dom";
-import { div } from "framer-motion/client";
-import Logo from "../../public/assets/logo/logo-gray-50.png"
 
 function Registration() {
-  const [step, setStep] = useState(1);
   const [showInfo, setShowInfo] = useState();
 
   useEffect(() => {
@@ -167,7 +164,7 @@ function Registration() {
 
             <div className="max-w-md mx-auto p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
               <h2 className="text-2xl font-medium text-center mb-6">Ro’yxatdan o’tish</h2>
- 
+
               <ul className="steps w-full ">
                 <li onClick={() => setStep(1)} className={`step cursor-pointer ${step >= 1 ? 'step-primary before:!bg-sky-500 after:!bg-sky-500 before:!border-none after:!border-none !border-none before:!text-white after:!text-white' : ''}`} >
                   Kontakt ma’lumotlari

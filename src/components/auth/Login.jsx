@@ -1,8 +1,7 @@
 import { useState } from "react";
-import GoogleIcon from "/assets/logo/google_icon.png";
+import GoogleIcon from "../../assets/icons/google.png";
 import { NavLink } from "react-router-dom";
-import ThemeSwitcher from "./ThemeSwitcher";
-import Logo from "../../public/assets/logo/logo-gray-50.png"
+import ThemeSwitcher from "../ui/ThemeSwitcher";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +17,7 @@ function Login() {
           <ThemeSwitcher />
         </div>
 
-    
+
 
 
 
