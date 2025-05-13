@@ -68,7 +68,7 @@ function SelectCourse() {
       <LeftDrawer />
       <BuyModal />
       <div className='p-6 rounded-xl container mx-auto px-3 flex flex-col md:flex-row items-start mt-4 gap-4 md:gap-8 text-gray-900 dark:text-gray-50 bg-white dark:bg-slate-800'>
-        <div className='w-full md:w-72 lg:w-92 rounded-lg border border-gray-200 dark:border-gray-800 bg-base-200 overflow-hidden'>
+        <div className='w-full  dark:bg-slate-950 md:w-72 lg:w-92 rounded-lg border dark:border-slate-100 border-slate-200 overflow-hidden'>
           <img src="https://42.uz/_next/image?url=http%3A%2F%2Fapi.42.uz%2Fmedia%2Fthumbnails%2FThumbnail-2.png&w=640&q=75" alt="Course_Title" />
           <div className='p-3  '>
             <h1 className='text-2xl font-medium'>Express Backend</h1>
@@ -95,8 +95,8 @@ function SelectCourse() {
               <span className='text-xs line-through flex items-center font-semibold text-red-500 ml-2'>1 480 000</span>
             </div>
 
-            <div className=''>
-              <button onClick={(e) => { e.preventDefault(), document.getElementById('buy_modal').showModal() }} className=' border-none mt-4 flex justify-between items-center w-full '>
+            <div className=' dark:bg-white rounded-lg dark:p-3 mt-4'>
+              <button onClick={(e) => { e.preventDefault(), document.getElementById('buy_modal').showModal() }} className=' border-none  flex justify-between items-center w-full '>
                 <span className='bg-sky-500 rounded-lg px-6 text-sm py-1.5 text-white'>Buy Now</span>
                 <span className='flex gap-1'>
                   <img src="/src/assets/payment_icon/Humo.svg" className='border w-8 h-5 p-[2px] rounded-sm border-[#ccc] border-none' alt='' />
@@ -116,20 +116,20 @@ function SelectCourse() {
               <div className="collapse collapse-arrow">
 
                 <input type="checkbox" id={`course-toggle-${index}`} defaultChecked={index === 0 || index === 1} />
-                <div className="collapse-title font-semibold bg-slate-950">
+                <div className="collapse-title font-semibold bg-slate-50 dark:bg-slate-950 ">
                   {course.title}
                 </div>
 
-                <div className="collapse-content p-0 bg-slate-950">
+                <div className="collapse-content p-0 bg-slate-50 dark:bg-slate-950">
                   {course.lessons.map((lesson, idx) => (
                     <NavLink to="select-lesson" key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-slate-700 ${lesson.locked ? '' : ''}
                       ${activeLesson === lesson.name ? '' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
                       <span className='flex items-center'>
 
                         {lesson.locked ?
-                          <i className="bi bi-play-circle bg-white dark:bg-slate-800 p-2 rounded-lg flex justify-center items-center"></i>
+                          <i className="bi bi-lock text-sky-500 bg-white dark:bg-slate-800 p-2 rounded-lg flex justify-center items-center"></i>
                           :
-                          <i className="bi bi-play-circle flex justify-center items-center bg-white dark:bg-slate-800 p-2 rounded-lg"></i>
+                          <i className="bi bi-play-fill flex justify-center items-center bg-white dark:bg-slate-800 p-2 rounded-lg"></i>
                         }
                         <span className='ml-2'>{lesson.name}</span>
 

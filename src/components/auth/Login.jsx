@@ -17,10 +17,6 @@ function Login() {
           <ThemeSwitcher />
         </div>
 
-
-
-
-
         <div className="flex items-center justify-center w-full">
 
 
