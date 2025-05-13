@@ -140,7 +140,7 @@ function SelectLesson() {
 
                 <div className="collapse-content px-3 space-y-1.5  ">
                   {course.lessons.map((lesson, idx) => (
-                    <div className="flex items-center justify-between border-l-4 border-sky-500 rounded-xs  bg-white dark:bg-slate-800 px-1 py-2 cursor-pointer  font-medium hover:bg-sky-50 dark:hover:bg-[#eed9ed]/20"
+                    <div className="flex items-center justify-between border-l-4 border-sky-500 rounded-xs  bg-white dark:bg-slate-800 px-1 py-2 cursor-pointer  font-medium hover:bg-sky-50 dark:hover:bg-slate-700"
                       onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
 
                       <span className='flex items-center'>

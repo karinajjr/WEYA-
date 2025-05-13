@@ -122,7 +122,7 @@ function SelectCourse() {
 
                 <div className="collapse-content p-0 bg-slate-50 dark:bg-slate-950">
                   {course.lessons.map((lesson, idx) => (
-                    <NavLink to="select-lesson" key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-slate-700 ${lesson.locked ? '' : ''}
+                    <NavLink to="select-lesson" key={idx} className={`flex items-center justify-between px-3 py-2 cursor-pointer mt-2 font-medium hover:bg-slate-200 dark:hover:bg-slate-700 ${lesson.locked ? '' : ''}
                       ${activeLesson === lesson.name ? '' : ''}`} onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
                       <span className='flex items-center'>
 
