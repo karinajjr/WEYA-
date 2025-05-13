@@ -72,7 +72,6 @@ function SelectLesson() {
     return () => window.removeEventListener("resize", updateView);
   }, []);
 
-
   const [activeLesson, setActiveLesson] = useState(null);
 
   const handleLessonClick = (lessonName, locked) => {
@@ -142,7 +141,6 @@ function SelectLesson() {
                   {course.lessons.map((lesson, idx) => (
                     <div className="flex items-center justify-between border-l-4 border-sky-500 rounded-xs  bg-white dark:bg-slate-800 px-1 py-2 cursor-pointer  font-medium hover:bg-sky-50 dark:hover:bg-slate-700"
                       onClick={() => handleLessonClick(lesson.name, lesson.locked)}>
-
                       <span className='flex items-center'>
                         <i className="bi bi-check2-circle px-1.5 text-sky-500"></i>
                         <span className='ml-2 font-normal'>{lesson.name}</span>
@@ -202,7 +200,7 @@ function SelectLesson() {
                 </label>
 
                 <div className="dropdown dropdown-end">
-                  <div tabIndex={0} role="button" className="btn w-full bg-slate-50 dark:bg-slate-950 border-none m-1 text-slate-500 dark:text-slate-100 font-normal flex items-center justify-between"  >
+                  <div tabIndex={0} role="button" className="btn w-37 bg-slate-50 dark:bg-slate-950 border-none m-1 text-slate-500 dark:text-slate-100 font-normal flex items-center justify-between"  >
                     Dars bo’yicha
                     <i className="bi bi-chevron-down ml-2"></i>
                   </div>
@@ -267,7 +265,7 @@ function SelectLesson() {
             <input type="radio" name="my_tabs_2" className="tab" aria-label="Izohlar" />
             <div className="tab-content border-t-slate-100 py-2">
               <h1>O’quvchilar fikri</h1>
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col md:flex-row md:justify-between gap-4 items-center">
                 <div className="flex flex-col space-y-1">
                   <span className="text-sky-500 text-center flex justify-center text-3xl font-bold mb-6">4.8</span>
                   <div className="flex  gap-3 ">
@@ -324,12 +322,12 @@ function SelectLesson() {
                   <p className="text-sm mt-2">Kurs o’rtacha baxosi</p>
                 </div>
 
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-3">
 
-                  <div className="flex items-center gap-2">
-                    <progress className="progress progress-info h-4 w-60 bg-sky-500" value="100" max="100"> </progress>
+                  <div className="flex items-center gap-6">
+                    <progress className="progress progress-info h-4 w-40 md:w-60 xl:w-90 2xl:w-100 bg-sky-500" value="100" max="100"> </progress>
                     <div className="flex gap-2">
-                      <div className="flex  gap-6  ">
+                      <div className="flex gap-4 md:gap-6 xl:gap-8 ">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
                           <defs>
                             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -384,10 +382,10 @@ function SelectLesson() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <progress className="progress progress-info h-4 w-60" value="70" max="100"></progress>
+                  <div className="flex items-center gap-6  ">
+                    <progress className="progress progress-info h-4 w-40 md:w-60 xl:w-90 2xl:w-100" value="70" max="100"></progress>
                     <div className="flex gap-2">
-                      <div className="flex  gap-6  ">
+                      <div className="flex  gap-4 md:gap-6 xl:gap-8 ">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
                           <defs>
                             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -442,10 +440,10 @@ function SelectLesson() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <progress className="progress progress-info h-4 w-60" value="40" max="100"></progress>
+                  <div className="flex items-center gap-6  ">
+                    <progress className="progress progress-info h-4 w-40 md:w-60 xl:w-90 2xl:w-100" value="40" max="100"></progress>
                     <div className="flex gap-2">
-                      <div className="flex  gap-6  ">
+                      <div className="flex  gap-4 md:gap-6 xl:gap-8">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
                           <defs>
                             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -500,10 +498,10 @@ function SelectLesson() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <progress className="progress progress-info h-4 w-60" value="20" max="100"></progress>
+                  <div className="flex items-center gap-6  ">
+                    <progress className="progress progress-info h-4 w-40 md:w-60 xl:w-90 2xl:w-100" value="20" max="100"></progress>
                     <div className="flex gap-2">
-                      <div className="flex  gap-6  ">
+                      <div className="flex  gap-4 md:gap-6 xl:gap-8">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
                           <defs>
                             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -558,10 +556,10 @@ function SelectLesson() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <progress className="progress progress-info h-4 w-60" value={0} max="100"></progress>
+                  <div className="flex items-center gap-6 ">
+                    <progress className="progress progress-info h-4 w-40 md:w-60 xl:w-90 2xl:w-100" value={0} max="100"></progress>
                     <div className="flex gap-2">
-                      <div className="flex  gap-6  ">
+                      <div className="flex gap-4 md:gap-6 xl:gap-8">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-auto" viewBox="0 0 16 16" >
                           <defs>
                             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -627,7 +625,7 @@ function SelectLesson() {
                 </label>
 
                 <div className="dropdown dropdown-end">
-                  <div tabIndex={0} role="button" className="btn w-full bg-slate-50 dark:bg-slate-950 border-none m-1 text-slate-500 dark:text-slate-100 font-normal flex items-center justify-between"  >
+                  <div tabIndex={0} role="button" className="btn w-37 bg-slate-50 dark:bg-slate-950 border-none m-1 text-slate-500 dark:text-slate-100 font-normal flex items-center justify-between"  >
                     Dars bo’yicha
                     <i className="bi bi-chevron-down ml-2"></i>
                   </div>
@@ -719,85 +717,7 @@ function SelectLesson() {
               </div>
             </div>
           </div>
-          {/* 
-          <div className="tabs tabs-lift mt-6 dark:border-white">
-            <label className="tab flex justify-center items-center gap-2  hover:text-sky-500 ">
-              <input type="radio" name="my_tabs_4" />
-              <i class="bi bi-patch-question flex justify-center items-center text-[16px]"></i>
-              <span className=" text-[16px] leading-none ">Q & A</span>
-            </label>
-            <div className="tab-content bg-base-100 border-base-300 p-6">
-              <div>
-                <span className="text-xl font-semibold">
-                  Savol va javoblar
-                </span>
-              </div>
 
-              <p className="mt-2">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga libero dolorem ratione inventore, totam
-                consectetur quod alias quasi consequatur repudiandae deserunt
-                hic sapiente. Magni quaerat qui porro soluta ipsa voluptas fuga
-                ipsum at ea inventore laboriosam expedita assumenda deleniti
-                quos vel quod illum eius iusto, deserunt nostrum debitis optio
-                culpa. Deserunt aperiam doloribus quo sapiente excepturi.
-                Placeat sequi doloremque vitae amet ducimus autem tempora quos?
-                Totam quisquam nesciunt voluptate labore, suscipit pariatur
-                voluptates eum obcaecati! Odio hic quasi accusamus quae dolorum
-                sed optio consequatur possimus assumenda ullam sint veniam sunt
-                tenetur earum, dolorem cum suscipit adipisci recusandae, sequi
-                voluptatem?
-              </p>
-            </div>
-
-            <label className="tab flex justify-center items-center gap-2 hover:text-sky-500 ">
-              <input type="radio" name="my_tabs_4" defaultChecked />
-              <i class="bi bi-files flex justify-center items-center text-[16px]"></i>
-              <span className="text-[16px] leading-none">Sources</span>
-            </label>
-            <div className="tab-content bg-base-100 border-base-300 p-6">
-              <span className="text-xl font-semibold">Files...</span>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente molestiae, fuga quod tempore dolor ut, numquam
-                dignissimos rem nulla iure corporis, ex porro. Iure quam a
-                tempore sunt dignissimos quasi nam natus repellat omnis quidem
-                recusandae delectus cumque dolor, placeat sequi ipsa assumenda
-                quaerat numquam fugiat libero! Corporis, maiores hic.
-              </p>
-            </div>
-
-            <label className="tab flex justify-center items-center gap-2  hover:text-sky-500">
-              <input type="radio" name="my_tabs_4" />
-              <i class="bi bi-chat-right-text flex justify-center items-center text-[16px]"></i>
-              <span className="text-[16px] leading-none">Comments</span>
-            </label>
-            <div className="tab-content bg-base-100 border-base-300 p-6">
-              <span className="text-xl font-semibold">Comments...</span>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi, fuga consequatur necessitatibus quam deserunt eaque
-                dolores eum libero quae cupiditate et ipsum omnis voluptatem
-                minus quas officia error sapiente. Fugit nulla vero
-                necessitatibus obcaecati commodi, hic tempore sit doloremque
-                consequuntur eaque optio, expedita veritatis vel voluptas
-                voluptate nam laboriosam facere id. Harum accusamus illum odio
-                nostrum adipisci, omnis atque assumenda in sunt ipsam velit
-                quasi, temporibus error, quidem veniam modi? Accusamus itaque
-                excepturi temporibus corrupti odit, perferendis, repellat
-                deleniti delectus recusandae molestias earum eveniet omnis quam
-                distinctio voluptate qui pariatur modi nihil laboriosam
-                explicabo necessitatibus. Ducimus ipsum, perferendis suscipit
-                accusamus, ipsam sed officiis magnam cumque dicta quis
-                necessitatibus mollitia consequuntur fuga perspiciatis
-                doloremque. Est sapiente asperiores, iste distinctio mollitia
-                pariatur vitae fugiat tempore nisi eaque quaerat consequuntur
-                saepe et exercitationem sint repellat eligendi aliquid quam
-                ratione error odio nam perspiciatis totam! Hic labore porro eos
-                eum quia ea modi officiis.
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
     </>
