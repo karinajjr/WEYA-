@@ -9,28 +9,44 @@ function MyProfile() {
     {
       to: "my-info",
       icon: "bi-person-circle",
-      label: "My information",
+      label: "Mening profilim",
     },
     {
       to: "my-experience",
       icon: "bi-briefcase",
-      label: "My experiences",
+      label: "Tajriba",
     },
     {
       to: "my-certificate",
       icon: "bi-patch-check",
-      label: "My certificates",
+      label: "Sertifikat",
+    },
+    {
+      to: "my-courses",
+      icon: "bi-book",
+      label: "Kurslarim",
+    },
+    {
+      to: "my-activity",
+      icon: "bi-activity",
+      label: "Mening faolligim",
+    },
+    {
+      to: "my-year-activity",
+      icon: "bi-calendar",
+      label: "Yillik faollik jadvali",
     },
     {
       to: "my-paymenthistory",
       icon: "bi-clock-history",
-      label: "Payment history",
+      label: "To’lov tarixi",
     },
     {
       to: "my-devices",
       icon: "bi-tv",
-      label: "My devices",
+      label: "Qurilma",
     },
+
   ];
   const [selectMenu, setSelectMenu] = useState("my-info");
   return (
@@ -41,17 +57,15 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 border border-gray-200 dark:border-gray-400 p-1 md:p-2   rounded-md absolute md:static bottom-3 left-3 right-3">
+        <div className="md:w-52 xl:w-72 bg-white shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
-                <button onClick={() => { setSelectMenu(to); }}
-                  className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-md md:rounded-full transition-all duration-300
+                <button onClick={() => { setSelectMenu(to); }} className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg 
                 ${selectMenu === to
-                      ? " bg-[#0EA5E9] text-white border-none"
-                      : "border-transparent "
-                    }`}
-                >
+                    ? " bg-sky-100 text-sky-500 font-semibold border-none"
+                    : "border-transparent text-slate-600"
+                  }`} >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                   <span className="text-[8px] md:text-[14px] text-nowrap">
                     {label}
@@ -65,70 +79,77 @@ function MyProfile() {
         <div className="w-[100%]  flex-1 overflow-x-auto rounded-md">
           {/* My Information */}
           <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`}  >
-            <div className="w-ful rounded-2xl p-2 bg-white dark:bg-[#111728]">
-              <div className="bg-gradient-to-r from-[#eed9ed]/50 dark:from-[#eed9ed]/10 to-[#2ec05a]/20 h-24 rounded-2xl"></div>
-
-              <div className="flex flex-col items-start m -mt-[70px] p-5 ">
-                <div className="w-24 h-24 bg-gray-100 dark:bg-[#111728] dark:border-gray-600 border-[7px] border-white rounded-full flex items-center justify-center shadow-md">
-                  <span className=" text-2xl font-semibold">ZJ</span>
+            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-[#111728]">
+              <div className=" bg-sky-100 rounded-2xl p-4 flex justify-between">
+                <div className="flex gap-4">
+                  <div className="avatar">
+                    <div className="w-15 rounded-full">
+                      <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                    </div>
+                  </div>
+                  <p className="mt-4  text-lg font-semibold">Zerda Jursinova</p>
                 </div>
 
-                <p className="mt-4  text-lg font-semibold">Zerda Jursinova</p>
                 <button onClick={() => document.getElementById("my_profile_info_update").showModal()}
-                  className="mt-4 btn rounded-full shadow-md bg-[#0EA5E9] text-white transition"  >
+                  className="mt-4 btn rounded-md shadow-md bg-[#0EA5E9] text-white transition border border-none"  >
                   Ma’lumotlarni o‘zgartirish
                 </button>
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4 md:gap-2 p-4 bg-white rounded-2xl dark:bg-[#111728]">
-              <div className="flex-1">
-                <p className="text-sm font-light opacity-80">
-                  Telefon raqamingiz:
-                </p>
-                <span className="font-semibold text-md">+998991449406</span>
-              </div>
-              <div className="flex-1">
-                <p className="text-sm font-light opacity-80">
-                  Elektron manzilingiz:
-                </p>
-                <span className="font-semibold text-md">
-                  zerdajursinova@gmail.com
-                </span>
-              </div>
-            </div>
-
-            <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
-              <div className="">
-                <h1 className="text-sm font-light opacity-80">
-                  {" "}
-                  Change Password
-                </h1>
-                <p className="font-semibold text-md">
-                  {" "}
-                  Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.{" "}
-                </p>
-              </div>
-              <div>
-                <button className="btn btn-sm rounded-full bg-gradient-to-r bg-[#0EA5E9] text-white flex justify-center items-center gap-2">
-                  <p className="text-nowrap">Change Password</p>
-                  <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
-                </button>
+            <div className="  p-4 bg-white rounded-2xl ">
+              <div className="flex flex-col md:flex-row dark:bg-[#111728] gap-4 md:gap-2 bg-sky-50 p-3 rounded-xl">
+                <div className="flex-1">
+                  <p className="text-sm font-light opacity-80">
+                    Telefon raqamingiz:
+                  </p>
+                  <span className="font-semibold text-md">+998991449406</span>
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-light opacity-80">
+                    Elektron manzilingiz:
+                  </p>
+                  <span className="font-semibold text-md">
+                    zerdajursinova@gmail.com
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div className="flex justify-between p-4 bg-white dark:bg-[#111728] rounded-2xl">
-              <div className="">
-                <h1 className="text-sm font-light opacity-80">
-                  Ma'lumotlarni ko'rsatish
-                </h1>
-                <p className="font-semibold text-md">
-                  Maʻlumotlaringizni saytda rezyume sifatida koʻrsatishingiz
-                  mumkin.
-                </p>
+            <div className=" p-4 bg-white  dark:bg-[#111728] rounded-2xl ">
+              <div className="flex justify-between bg-sky-50 rounded-xl p-3 items-center">
+                <div className="">
+                  <h1 className="text-sm font-light opacity-80">
+                    {" "}
+                    Change Password
+                  </h1>
+                  <p className="font-semibold text-md">
+                    {" "}
+                    Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.{" "}
+                  </p>
+                </div>
+                <div>
+                  <button className="btn btn-sm rounded-full bg-gradient-to-r bg-[#0EA5E9] text-white flex justify-center items-center gap-2">
+                    <p className="text-nowrap">Change Password</p>
+                    <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
+                  </button>
+                </div>
               </div>
+            </div>
 
-              <div>
+            <div className=" p-4 bg-white dark:bg-[#111728] rounded-2xl">
+              <div className="flex justify-between rounded-xl bg-sky-50 p-3 items-center">
+                <div className="">
+                  <h1 className="text-sm font-light opacity-80">
+                    Ma'lumotlarni ko'rsatish
+                  </h1>
+                  <p className="font-semibold text-md">
+                    Maʻlumotlaringizni saytda rezyume sifatida koʻrsatishingiz
+                    mumkin.
+                  </p>
+                </div>
+
+
                 <label className="toggle text-base-content  border-none  bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
                   <input type="checkbox" />
                   <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"  >
@@ -141,7 +162,6 @@ function MyProfile() {
                   </svg>
                 </label>
               </div>
-
 
             </div>
           </div>
@@ -206,6 +226,49 @@ function MyProfile() {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* My courses*/}
+          <div className={`${selectMenu === "my-courses" ? "block" : "hidden"}`}  >
+            <div className="card bg-base-100 w-66 shadow-sm">
+              <figure>
+                <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" className="w-full h-35" />
+              </figure>
+              <div className="card-body p-4 space-y-2">
+                <h2 className="card-title">Express Backend</h2>
+                <div className="flex items-center gap-2">
+                  <progress className="progress progress-info w-full" value="70" max="100"> </progress>
+                  <p className="text-sky-500 font-semibold">  20%</p>
+                </div>
+
+                <button className="btn btn-primary w-full rounded-lg bg-sky-500 border-none shadow-none text-white font-normal">Darsni davom etirish</button>
+              </div>
+            </div>
+          </div>
+
+          {/* My activity*/}
+          <div className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}  >
+
+            <div className="bg-white p-3 shadow-2xl">
+             <div>
+               <div className="avatar">
+                <div className="w-12 rounded-full">
+                  <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                </div>
+              </div>
+              <div>
+                <h1>Shukurillo Abdumannobov</h1>
+                <p>6357 daqiqa</p>
+              </div>
+             </div>
+             <span>1</span>
+            </div>
+          </div>
+
+          {/* My year activity*/}
+          <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`}  >
+
+            <h1>difhgлшогрнепкавytguhijokpluvi</h1>
           </div>
 
           {/* Payment History */}
@@ -353,76 +416,76 @@ function MyProfile() {
           {/* My Devices */}
           <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}  >
 
-          <div className="bg-white dark:bg-[#111728] p-3 rounded-xl hidden md:block ">
-          <div>
-              <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
-              <p className="text-[#7F868B] mt-4 font-light text-[13px]">
-                Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
-                olishingiz mumkin.
-                <br />
-                Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud
-                ikkita qurilmalardan birini oʻchirishingiz kerak.
-              </p>
-            </div>
+            <div className="bg-white dark:bg-[#111728] p-3 rounded-xl hidden md:block ">
+              <div>
+                <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
+                <p className="text-[#7F868B] mt-4 font-light text-[13px]">
+                  Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
+                  olishingiz mumkin.
+                  <br />
+                  Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud
+                  ikkita qurilmalardan birini oʻchirishingiz kerak.
+                </p>
+              </div>
 
-            <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-3 py-2 rounded-xl mt-4 flex">
-              <i className="bi bi-exclamation-circle-fill text-yellow-300 dark:text-yellow-500 mr-3"></i>
-              <h1 className="text-[#1A202C]">
-                Faqatgina 2ta qurilmadan kirishingiz mumkin.
-              </h1>
-            </div>
+              <div className="bg-[#FFFCED] dark:bg-[#f8e588] px-3 py-2 rounded-xl mt-4 flex">
+                <i className="bi bi-exclamation-circle-fill text-yellow-300 dark:text-yellow-500 mr-3"></i>
+                <h1 className="text-[#1A202C]">
+                  Faqatgina 2ta qurilmadan kirishingiz mumkin.
+                </h1>
+              </div>
 
-            <div className="mt-4">
-              <table className="table table-zebra mt-4">
-                <thead className="bg-[#F5FAFF] dark:bg-[#2b3656]">
-                  <tr className="text-[#3F9CFB]">
-                    <th>QURUIMA NOMI</th>
-                    <th>FOALLASHTIRILGAAN SANA</th>
-                    <th>HARAKARLAR</th>
-                  </tr>
-                </thead>
+              <div className="mt-4">
+                <table className="table table-zebra mt-4">
+                  <thead className="bg-[#F5FAFF] dark:bg-[#2b3656]">
+                    <tr className="text-[#3F9CFB]">
+                      <th>QURUIMA NOMI</th>
+                      <th>FOALLASHTIRILGAAN SANA</th>
+                      <th>HARAKARLAR</th>
+                    </tr>
+                  </thead>
 
-                <tbody>
-                  <tr>
-                    <td className="flex">
-                      <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
-                      <div className="ml-3">
-                        <h1 className="font-medium text-nowrap">
-                          Mac OS 10.15.7, Chrome 133
-                        </h1>
-                        <p className="text-green-500 text-xs">Mazkur qurilma</p>
-                      </div>
-                    </td>
-                    <td>11:05:01, 04.03.2025</td>
-                    <td>
-                      <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
-                        <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
-                        <span>Delete</span>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="flex items-center">
-                      <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
-                      <div className="ml-3">
-                        <h1 className="font-medium text-center text-nowrap">
-                          Iphone 16.15.7, Chrome 133
-                        </h1>
-                        <p className="text-xs">2 days ago</p>
-                      </div>
-                    </td>
-                    <td>13:38:34, 01.03.2025</td>
-                    <td>
-                      <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
-                        <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
-                        <span>Delete</span>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                  <tbody>
+                    <tr>
+                      <td className="flex">
+                        <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                        <div className="ml-3">
+                          <h1 className="font-medium text-nowrap">
+                            Mac OS 10.15.7, Chrome 133
+                          </h1>
+                          <p className="text-green-500 text-xs">Mazkur qurilma</p>
+                        </div>
+                      </td>
+                      <td>11:05:01, 04.03.2025</td>
+                      <td>
+                        <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                          <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
+                          <span>Delete</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="flex items-center">
+                        <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+                        <div className="ml-3">
+                          <h1 className="font-medium text-center text-nowrap">
+                            Iphone 16.15.7, Chrome 133
+                          </h1>
+                          <p className="text-xs">2 days ago</p>
+                        </div>
+                      </td>
+                      <td>13:38:34, 01.03.2025</td>
+                      <td>
+                        <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
+                          <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
+                          <span>Delete</span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
 
 
             <div className="bg-white dark:bg-[#111728] rounded-xl p-4 block md:hidden">
@@ -482,6 +545,8 @@ function MyProfile() {
               </div>
             </div>
           </div>
+
+
         </div >
       </section >
     </>

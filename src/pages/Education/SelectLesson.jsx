@@ -264,8 +264,8 @@ function SelectLesson() {
 
             <input type="radio" name="my_tabs_2" className="tab" aria-label="Izohlar" />
             <div className="tab-content border-t-slate-100 py-2">
-              <h1>O’quvchilar fikri</h1>
-              <div className="flex flex-col md:flex-row md:justify-between gap-4 items-center">
+              <h1 className="font-medium">O’quvchilar fikri</h1>
+              <div className="flex flex-col md:flex-row md:justify-between gap-4 items-center mt-1">
                 <div className="flex flex-col space-y-1">
                   <span className="text-sky-500 text-center flex justify-center text-3xl font-bold mb-6">4.8</span>
                   <div className="flex  gap-3 ">
@@ -614,7 +614,6 @@ function SelectLesson() {
                     </div>
                   </div>
                 </div>
-
 
               </div>
 
