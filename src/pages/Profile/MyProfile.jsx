@@ -249,19 +249,49 @@ function MyProfile() {
           {/* My activity*/}
           <div className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}  >
 
-            <div className="bg-white p-3 shadow-2xl">
-             <div>
-               <div className="avatar">
-                <div className="w-12 rounded-full">
-                  <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+            <div className=" space-y-4 h-screen">
+              <div className="bg-white py-3 px-5 flex justify-between rounded-xl items-center shadow">
+                <div className="flex gap-3 items-center ">
+                  <div className="avatar">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Shukurillo Abdumannobov</h1>
+                    <p className="text-sky-600 text-sm ">6357 daqiqa</p>
+                  </div>
                 </div>
+                <span>1</span>
               </div>
-              <div>
-                <h1>Shukurillo Abdumannobov</h1>
-                <p>6357 daqiqa</p>
+              <div className="bg-white py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+                <div className="flex gap-3 items-center ">
+                  <div className="avatar">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Shukurillo Abdumannobov</h1>
+                    <p className="text-sky-600 text-sm ">6357 daqiqa</p>
+                  </div>
+                </div>
+                <span>2</span>
               </div>
-             </div>
-             <span>1</span>
+              <div className="bg-white py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+                <div className="flex gap-3 items-center ">
+                  <div className="avatar">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Shukurillo Abdumannobov</h1>
+                    <p className="text-sky-600 text-sm ">6357 daqiqa</p>
+                  </div>
+                </div>
+                <span>3</span>
+              </div>
             </div>
           </div>
 
