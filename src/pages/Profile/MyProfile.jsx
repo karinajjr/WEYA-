@@ -57,14 +57,14 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 bg-white shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <div className="md:w-52 xl:w-72 bg-white dark:bg-[#111728] shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
                 <button onClick={() => { setSelectMenu(to); }} className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg 
                 ${selectMenu === to
                     ? " bg-sky-100 text-sky-500 font-semibold border-none"
-                    : "border-transparent text-slate-600"
+                    : "border-transparent text-slate-600 dark:text-slate-100"
                   }`} >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
                   <span className="text-[8px] md:text-[14px] text-nowrap">
@@ -80,7 +80,7 @@ function MyProfile() {
           {/* My Information */}
           <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`}  >
             <div className="w-ful rounded-2xl p-3 bg-white dark:bg-[#111728]">
-              <div className=" bg-sky-100 rounded-2xl p-4 flex justify-between">
+              <div className=" bg-sky-100 dark:bg-slate-800 rounded-2xl p-4 flex justify-between">
                 <div className="flex gap-4">
                   <div className="avatar">
                     <div className="w-15 rounded-full">
@@ -97,72 +97,64 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className="  p-4 bg-white rounded-2xl ">
-              <div className="flex flex-col md:flex-row dark:bg-[#111728] gap-4 md:gap-2 bg-sky-50 p-3 rounded-xl">
-                <div className="flex-1">
-                  <p className="text-sm font-light opacity-80">
-                    Telefon raqamingiz:
-                  </p>
-                  <span className="font-semibold text-md">+998991449406</span>
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm font-light opacity-80">
-                    Elektron manzilingiz:
-                  </p>
-                  <span className="font-semibold text-md">
-                    zerdajursinova@gmail.com
-                  </span>
-                </div>
+            <div className="flex flex-col md:flex-row dark:bg-[#111728] gap-4 md:gap-2 bg-white p-4 rounded-xl">
+              <div className="flex-1">
+                <p className="text-sm font-light opacity-80">
+                  Telefon raqamingiz:
+                </p>
+                <span className="font-semibold text-md">+998991449406</span>
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-light opacity-80">
+                  Elektron manzilingiz:
+                </p>
+                <span className="font-semibold text-md">
+                  zerdajursinova@gmail.com
+                </span>
               </div>
             </div>
 
-            <div className=" p-4 bg-white  dark:bg-[#111728] rounded-2xl ">
-              <div className="flex justify-between bg-sky-50 rounded-xl p-3 items-center">
-                <div className="">
-                  <h1 className="text-sm font-light opacity-80">
-                    {" "}
-                    Change Password
-                  </h1>
-                  <p className="font-semibold text-md">
-                    {" "}
-                    Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.{" "}
-                  </p>
-                </div>
-                <div>
-                  <button className="btn btn-sm rounded-full bg-gradient-to-r bg-[#0EA5E9] text-white flex justify-center items-center gap-2">
-                    <p className="text-nowrap">Change Password</p>
-                    <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
-                  </button>
-                </div>
+            <div className=" p-4 bg-white  dark:bg-[#111728] rounded-2xl flex justify-between items-center ">
+              <div>
+                <h1 className="text-sm font-light opacity-80">
+                  {" "}
+                  Change Password
+                </h1>
+                <p className="font-semibold text-md">
+                  {" "}
+                  Bu yerda hisobingiz parolini oʻzgartirishingiz mumkin.{" "}
+                </p>
+              </div>
+              <div>
+                <button className="btn btn-sm rounded-sm border-sky-500  text-sky-500  dark:bg-slate-900 flex justify-center items-center gap-2 hover:bg-sky-100 dark:hover:bg-slate-950">
+                  <p className="text-nowrap">Change Password</p>
+                  <i className="bi bi-box-arrow-up-right flex justify-center items-center"></i>
+                </button>
               </div>
             </div>
 
-            <div className=" p-4 bg-white dark:bg-[#111728] rounded-2xl">
-              <div className="flex justify-between rounded-xl bg-sky-50 p-3 items-center">
-                <div className="">
-                  <h1 className="text-sm font-light opacity-80">
-                    Ma'lumotlarni ko'rsatish
-                  </h1>
-                  <p className="font-semibold text-md">
-                    Maʻlumotlaringizni saytda rezyume sifatida koʻrsatishingiz
-                    mumkin.
-                  </p>
-                </div>
-
-
-                <label className="toggle text-base-content  border-none  bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
-                  <input type="checkbox" />
-                  <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"  >
-                    <path d="M18 6 6 18" />  <path d="m6 6 12 12" />
-                  </svg>
-                  <svg aria-label="disabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
-                    <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor" >
-                      <path d="M20 6 9 17l-5-5"></path>
-                    </g>
-                  </svg>
-                </label>
+            <div className=" p-4 bg-white dark:bg-[#111728] rounded-2xl flex justify-between items-center">
+              <div className="">
+                <h1 className="text-sm font-light opacity-80">
+                  Ma'lumotlarni ko'rsatish
+                </h1>
+                <p className="font-semibold text-md">
+                  Maʻlumotlaringizni saytda rezyume sifatida koʻrsatishingiz
+                  mumkin.
+                </p>
               </div>
 
+              <label className="toggle text-base-content  border-none  bg-gradient-to-r from-[#0EA5E9]  to-[#0EA5E9]">
+                <input type="checkbox" />
+                <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"  >
+                  <path d="M18 6 6 18" />  <path d="m6 6 12 12" />
+                </svg>
+                <svg aria-label="disabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                  <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="4" fill="none" stroke="currentColor" >
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </g>
+                </svg>
+              </label>
             </div>
           </div>
 
@@ -230,7 +222,7 @@ function MyProfile() {
 
           {/* My courses*/}
           <div className={`${selectMenu === "my-courses" ? "block" : "hidden"}`}  >
-            <div className="card bg-base-100 w-66 shadow-sm">
+            <div className="card bg-base-100 dark:bg-[#111728] w-66 shadow-sm">
               <figure>
                 <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" className="w-full h-35" />
               </figure>
@@ -250,7 +242,7 @@ function MyProfile() {
           <div className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}  >
 
             <div className=" space-y-4 h-screen">
-              <div className="bg-white py-3 px-5 flex justify-between rounded-xl items-center shadow">
+              <div className="bg-white dark:bg-[#111728] py-3 px-5 flex justify-between rounded-xl items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -264,7 +256,7 @@ function MyProfile() {
                 </div>
                 <span>1</span>
               </div>
-              <div className="bg-white py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-[#111728] py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -278,7 +270,7 @@ function MyProfile() {
                 </div>
                 <span>2</span>
               </div>
-              <div className="bg-white py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-[#111728] py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -303,142 +295,50 @@ function MyProfile() {
 
           {/* Payment History */}
           <div className={` ${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
-            <div className="bg-white dark:bg-[#111728] p-2  rounded-xl">
-              <h1 className="font-semibold p-2 text-xl mb-1">To'lovlar tarixi</h1>
-              <div className=" ">
 
-                <div className="hidden md:block">
-                  <table className="table mt-4 p-6 ">
-                    <thead className="bg-[#F5FAFF] dark:bg-[#2b3656] rounded-xl boeder-none">
-                      <tr className="text-[#6eb4fb] border-none rounded-xl ">
-                        <th>
-                          KURS NOMI
-                          <i className="bi bi-caret-down-fill"></i>
-                        </th>
-                        <th>
-                          SANA
-                          <i className="bi bi-caret-down-fill"></i>
-                        </th>
-                        <th>
-                          QIYMAT
-                          <i className="bi bi-caret-down-fill"></i>
-                        </th>
-                        <th>
-                          TO'LOV TURI
-                          <i className="bi bi-caret-down-fill"></i>
-                        </th>
-                        <th>
-                          STATUS
-                          <i className="bi bi-caret-down-fill"></i>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-none">
-                        <td>
-                          <span className="block text-black dark:text-white">
-                            Professional Node.JS
-                          </span>
-                          <span className="text-black dark:text-white">
-                            Noldan boshlab eʼlonlar sayti yaratishni oʻrganing!
-                          </span>
-                        </td>
-                        <td>
-                          <span className="text-black dark:text-white">28.11.2024</span>
-                        </td>
-                        <td className="text-[#3F9CFB]">
-                          <span>247.000 so'm</span>
-                        </td>
-                        <td className="text-black dark:text-white">Bir martalik toʻlov</td>
-                        <td className="text-[#FDC724]">Jarayonda</td>
-                      </tr>
-                    </tbody>
-
-                  </table>
+            <div className="bg-white dark:bg-[#111728] p-4 rounded-xl">
+              <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
+              <div className="grid grid-cols-1  md:table w-full">
+          
+                <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-[#6eb4fb] rounded-2xl font-semibold">
+                  <div className="table-row ">
+                    <div className="table-cell px-2 py-4">KURS NOMI</div>
+                    <div className="table-cell px-2 py-4">SANA</div>
+                    <div className="table-cell px-2 py-4">QIYMAT</div>
+                    <div className="table-cell px-2 py-4">TO'LOV TURI</div>
+                    <div className="table-cell px-2 py-4">STATUS</div>
+                  </div>
                 </div>
+          
+                <div className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
+               
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">KURS NOMI:</span>
+                    <div>
+                      <div className="text-black dark:text-white font-medium">Professional Node.JS</div>
+                    </div>
+                  </div>
 
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
+                    <span className="text-black dark:text-white">28.11.2024</span>
+                  </div>
 
-                <div className=" block md:hidden space-y-3">
-                  <table class=" min-w-full border border-gray-200">
-                    <tbody>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
-                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
-                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">QIYMAT:</span>
+                    <span className="text-[#3F9CFB]">247.000 so'm</span>
+                  </div>
 
-                  <table class=" min-w-full border border-gray-200">
-                    <tbody>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
-                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
-                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">TO'LOV TURI:</span>
+                    <span className="text-black dark:text-white">Bir martalik toʻlov</span>
+                  </div>
 
-                  <table class=" min-w-full border border-gray-200">
-                    <tbody>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
-                        <td class="px-4 py-2 text-green-500">247.900 so’m</td>
-                      </tr>
-                      <tr class="border-b border-gray-200">
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
-                        <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
-                      </tr>
-                      <tr>
-                        <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
-                        <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                  <div className="flex justify-between md:table-cell md:p-2">
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">STATUS:</span>
+                    <span className="text-[#FDC724]">Jarayonda</span>
+                  </div>
                 </div>
-
-
-
-
               </div>
             </div>
           </div>
@@ -584,3 +484,102 @@ function MyProfile() {
 }
 
 export default MyProfile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <div className=" block md:hidden space-y-3">
+//   <table class=" min-w-full border border-gray-200">
+//     <tbody>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+//         <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+//       </tr>
+//       <tr>
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+//         <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+//       </tr>
+//     </tbody>
+//   </table>
+
+//   <table class=" min-w-full border border-gray-200">
+//     <tbody>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+//         <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+//       </tr>
+//       <tr>
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+//         <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+//       </tr>
+//     </tbody>
+//   </table>
+
+//   <table class=" min-w-full border border-gray-200">
+//     <tbody>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Kurs nomi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Proffesional node.JS</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Sanasi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">28-11-2024</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Qiymati</td>
+//         <td class="px-4 py-2 text-green-500">247.900 so’m</td>
+//       </tr>
+//       <tr class="border-b border-gray-200">
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">To’lov turi</td>
+//         <td class="px-4 py-2 dark:text-slate-100 ">Bir martalik to’lov</td>
+//       </tr>
+//       <tr>
+//         <td class="px-4 py-2 font-medium text-right border-r border-gray-200">Status</td>
+//         <td class="px-4 py-2 text-yellow-500">Jarayonda</td>
+//       </tr>
+//     </tbody>
+//   </table>
+
+// </div>
