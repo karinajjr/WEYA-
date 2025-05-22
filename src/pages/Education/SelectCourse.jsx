@@ -5,6 +5,7 @@ import BuyModal from '../../components/modals/BuyModal';
 import { div } from 'framer-motion/client';
 
 function SelectCourse() {
+  
   const [activeLesson, setActiveLesson] = useState(null);
 
   const courses = [

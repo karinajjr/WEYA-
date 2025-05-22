@@ -4,7 +4,26 @@ import AddEducation from "../../components/modals/AddEducation";
 import AddWorkExperience from "../../components/modals/AddWorkExperience";
 import DeleteDevice from "../../components/modals/DeleteDevice";
 
+import CalendarHeatmap from 'react-calendar-heatmap';
+import 'react-calendar-heatmap/dist/styles.css';
+import { subDays } from 'date-fns';
+
+const today = new Date();
+const oneYearAgo = new Date();
+oneYearAgo.setDate(today.getDate() - 365);
+
 function MyProfile() {
+  const values = [
+    { date: '2025-01-01', count: 2 },
+    { date: '2025-01-02', count: 3 },
+    { date: '2025-01-03', count: 5 },
+    { date: '2025-02-30', count: 7 },
+
+  ]
+
+  const uzbekMonths = ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentabr', 'Oktabr', 'Noyabr', 'Dekabr'];
+  const uzbekDays = ['Yak', 'Du', 'Se', 'Ch', 'Pa', 'Ju', 'Sh'];
+
   const menus = [
     {
       to: "my-info",
@@ -289,8 +308,57 @@ function MyProfile() {
 
           {/* My year activity*/}
           <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`}  >
+            <div className="p-4 bg-white">
+              <div className="flex justify-between  text-slate-800 pl-8 pr-5">
+                {uzbekMonths.map((month, index) => (
+                  <span key={index} className="w-[32px] text-center text-[13px]">{month}</span>
+                ))}
+              </div>
 
-            <h1>difhgлшогрнепкавytguhijokpluvi</h1>
+              <div className="flex">
+                <div className="flex flex-col space-y-0.5 justify-end mr-2  text-slate-800">
+                  {uzbekDays.map((day, index) => (
+                    <span key={index} className="h-[16px] text-[11px]">{day}</span>
+                  ))}
+                </div>
+
+                <CalendarHeatmap
+                  startDate={subDays(today, 266)}
+                  endDate={today}
+                  values={values}
+                  showWeekdayLabels={false}
+                  classForValue={(value) => {
+                    if (!value) return 'fill-sky-100';
+                    if (value.count >= 5) return 'fill-sky-500';
+                    if (value.count >= 3) return 'fill-sky-400';
+                    if (value.count >= 2) return 'fill-sky-300';
+                    if (value.count >= 7) return 'fill-sky-200';
+                    return 'fill-gray-200 ';
+                  }}
+                  tooltipDataAttrs={(value) => ({
+                    'data-tip': `${value.date}: ${value.count || 0} раз(а) был активен`,
+                  })}
+                  gutterSize={3}
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <p className="text-xs text-slate-600">2025-yil uchun faolliklar</p>
+
+                <div className="flex items-center space-x-1">
+                  <p className="text-xs text-slate-600">
+                    Kam
+                  </p>
+                  <div className="w-4 h-4 rounded-sm bg-sky-100"></div>
+                  <div className="w-4 h-4 rounded-sm bg-sky-200"></div>
+                  <div className="w-4 h-4 rounded-sm bg-sky-300"></div>
+                  <div className="w-4 h-4 rounded-sm bg-sky-400"></div>
+                  <div className="w-4 h-4 rounded-sm bg-sky-500"></div>
+                  <p className="text-xs text-slate-600">
+                    Ko'p
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Payment History */}
@@ -299,7 +367,7 @@ function MyProfile() {
             <div className="bg-white dark:bg-[#111728] p-4 rounded-xl">
               <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
               <div className="grid grid-cols-1  md:table w-full">
-          
+
                 <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-[#6eb4fb] rounded-2xl font-semibold">
                   <div className="table-row ">
                     <div className="table-cell px-2 py-4">KURS NOMI</div>
@@ -309,9 +377,9 @@ function MyProfile() {
                     <div className="table-cell px-2 py-4">STATUS</div>
                   </div>
                 </div>
-          
+
                 <div className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
-               
+
                   <div className="flex justify-between md:table-cell md:p-2">
                     <span className="text-[#6eb4fb] font-semibold md:hidden">KURS NOMI:</span>
                     <div>
@@ -320,7 +388,7 @@ function MyProfile() {
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
+                    <span className="text-[#6eb4fb] font-semibold md:hтзьidden">SANA:</span>
                     <span className="text-black dark:text-white">28.11.2024</span>
                   </div>
 
