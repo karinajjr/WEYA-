@@ -309,14 +309,14 @@ function MyProfile() {
           {/* My year activity*/}
           <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`}  >
             <div className="p-4 bg-white">
-              <div className="flex justify-between  text-slate-800 pl-8 pr-5">
+              <div className="flex justify-between mb-3 text-slate-800 pl-6 pr-5">
                 {uzbekMonths.map((month, index) => (
                   <span key={index} className="w-[32px] text-center text-[13px]">{month}</span>
                 ))}
               </div>
 
               <div className="flex">
-                <div className="flex flex-col space-y-0.5 justify-end mr-2  text-slate-800">
+                <div className="flex flex-col sm:space-y-0 md:space-y-1 justify-end mr-2  text-slate-800">
                   {uzbekDays.map((day, index) => (
                     <span key={index} className="h-[16px] text-[11px]">{day}</span>
                   ))}
@@ -327,6 +327,7 @@ function MyProfile() {
                   endDate={today}
                   values={values}
                   showWeekdayLabels={false}
+                  showMonthLabels={false}
                   classForValue={(value) => {
                     if (!value) return 'fill-sky-100';
                     if (value.count >= 5) return 'fill-sky-500';
