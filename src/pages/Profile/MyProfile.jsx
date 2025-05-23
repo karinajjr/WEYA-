@@ -76,13 +76,13 @@ function MyProfile() {
       <DeleteDevice />
 
       <section className="container mx-auto px-3 mt-4 flex items-start gap-4 text-gray-900 dark:text-gray-50">
-        <div className="md:w-52 xl:w-72 bg-white dark:bg-[#111728] shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
+        <div className="md:w-52 xl:w-72 bg-white dark:bg-slate-800 shadow-xs p-1 md:p-2 rounded-md absolute md:static bottom-3 left-3 right-3">
           <ul className="flex justify-between md:flex-col gap-2">
             {menus.map(({ to, icon, label }) => (
               <li key={to} className="w-full">
                 <button onClick={() => { setSelectMenu(to); }} className={`w-full cursor-pointer hover:border flex flex-col md:flex-row border justify-start items-center gap-2 px-1 md:px-3 py-1 md:py-2 rounded-lg 
                 ${selectMenu === to
-                    ? " bg-sky-100 text-sky-500 font-semibold border-none"
+                    ? " bg-sky-100 dark:bg-slate-950 text-sky-500 font-semibold border-none"
                     : "border-transparent text-slate-600 dark:text-slate-100"
                   }`} >
                   <i className={`bi ${icon} text-lg flex justify-center items-center`} ></i>
@@ -98,8 +98,8 @@ function MyProfile() {
         <div className="w-[100%]  flex-1 overflow-x-auto rounded-md">
           {/* My Information */}
           <div className={`flex flex-col gap-2 ${selectMenu === "my-info" ? "block" : "hidden"}`}  >
-            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-[#111728]">
-              <div className=" bg-sky-100 dark:bg-slate-800 rounded-2xl p-4 flex justify-between">
+            <div className="w-ful rounded-2xl p-3 bg-white dark:bg-slate-800">
+              <div className=" bg-sky-100 dark:bg-slate-950 rounded-2xl p-4 flex justify-between">
                 <div className="flex gap-4">
                   <div className="avatar">
                     <div className="w-15 rounded-full">
@@ -116,7 +116,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className="flex flex-col md:flex-row dark:bg-[#111728] gap-4 md:gap-2 bg-white p-4 rounded-xl">
+            <div className="flex flex-col md:flex-row dark:bg-slate-800 gap-4 md:gap-2 bg-white p-4 rounded-xl">
               <div className="flex-1">
                 <p className="text-sm font-light opacity-80">
                   Telefon raqamingiz:
@@ -133,7 +133,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className=" p-4 bg-white  dark:bg-[#111728] rounded-2xl flex justify-between items-center ">
+            <div className=" p-4 bg-white  dark:bg-slate-800 rounded-2xl flex justify-between items-center ">
               <div>
                 <h1 className="text-sm font-light opacity-80">
                   {" "}
@@ -152,7 +152,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className=" p-4 bg-white dark:bg-[#111728] rounded-2xl flex justify-between items-center">
+            <div className=" p-4 bg-white dark:bg-slate-800 rounded-2xl flex justify-between items-center">
               <div className="">
                 <h1 className="text-sm font-light opacity-80">
                   Ma'lumotlarni ko'rsatish
@@ -179,7 +179,7 @@ function MyProfile() {
 
           {/* My experience */}
           <div className={`${selectMenu === "my-experience" ? "block" : "hidden"}`} >
-            <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center mb-6">
+            <div className="w-full p-3 bg-white dark:bg-slate-800 rounded-lg text-center mb-6">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-book-fill px-2 py-1 rounded-lg text-[#0EA5E9] text-2xl mb-8"></i>
                 <div>
@@ -198,7 +198,7 @@ function MyProfile() {
               </div>
             </div>
 
-            <div className="w-full p-3 bg-white dark:bg-[#111728] rounded-lg text-center">
+            <div className="w-full p-3 bg-white dark:bg-slate-800 rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-briefcase-fill text-4xl  text-[#0EA5E9]  px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
@@ -220,7 +220,7 @@ function MyProfile() {
 
           {/* My Certificate */}
           <div className={`${selectMenu === "my-certificate" ? "block" : "hidden"}`} >
-            <div className="w-full p-3 dark:bg-[#111728] bg-white rounded-lg text-center">
+            <div className="w-full p-3 dark:bg-slate-800 bg-white rounded-lg text-center">
               <div className="flex flex-col items-center justify-center p-8">
                 <i className="bi bi-award-fill text-4xl  text-[#0EA5E9] px-2 py-2 rounded-lg  mb-8"></i>
                 <div>
@@ -241,7 +241,7 @@ function MyProfile() {
 
           {/* My courses*/}
           <div className={`${selectMenu === "my-courses" ? "block" : "hidden"}`}  >
-            <div className="card bg-base-100 dark:bg-[#111728] w-66 shadow-sm">
+            <div className="card bg-base-100 dark:bg-slate-800 w-66 shadow-sm">
               <figure>
                 <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" className="w-full h-35" />
               </figure>
@@ -261,7 +261,7 @@ function MyProfile() {
           <div className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}  >
 
             <div className=" space-y-4 h-screen">
-              <div className="bg-white dark:bg-[#111728] py-3 px-5 flex justify-between rounded-xl items-center shadow">
+              <div className="bg-white dark:bg-slate-800 py-3 px-5 flex justify-between rounded-xl items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -275,7 +275,7 @@ function MyProfile() {
                 </div>
                 <span>1</span>
               </div>
-              <div className="bg-white dark:bg-[#111728] py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-slate-800 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -289,7 +289,7 @@ function MyProfile() {
                 </div>
                 <span>2</span>
               </div>
-              <div className="bg-white dark:bg-[#111728] py-3 px-5  flex justify-between rounded-xl  items-center shadow">
+              <div className="bg-white dark:bg-slate-800 py-3 px-5  flex justify-between rounded-xl  items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
                     <div className="w-12 rounded-full">
@@ -307,65 +307,65 @@ function MyProfile() {
           </div>
 
           {/* My year activity*/}
-          <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`}  >
-            <div className="p-4 bg-white">
-              <div className="flex justify-between mb-3 text-slate-800 pl-6 pr-5">
+          <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`} >
+            <div className="p-4 bg-white dark:bg-slate-800">
+              <div className="flex justify-between mb-3 text-slate-800 dark:text-white pl-6 pr-5 ">
                 {uzbekMonths.map((month, index) => (
-                  <span key={index} className="w-[32px] text-center text-[13px]">{month}</span>
+                  <span key={index} className="w-[32px] text-center text-[8px] md:text-[13px]">{month}</span>
                 ))}
               </div>
 
-              <div className="flex">
-                <div className="flex flex-col sm:space-y-0 md:space-y-1 justify-end mr-2  text-slate-800">
+              <div className="flex overflow-x-auto">
+                <div className="flex flex-col  space-y-1 lg:space-y-1.5 xl:space-y-2  2xl:space-y-4 justify-end mr-2 text-slate-800 dark:text-white">
                   {uzbekDays.map((day, index) => (
                     <span key={index} className="h-[16px] text-[11px]">{day}</span>
                   ))}
                 </div>
 
-                <CalendarHeatmap
-                  startDate={subDays(today, 266)}
-                  endDate={today}
-                  values={values}
-                  showWeekdayLabels={false}
-                  showMonthLabels={false}
-                  classForValue={(value) => {
-                    if (!value) return 'fill-sky-100';
-                    if (value.count >= 5) return 'fill-sky-500';
-                    if (value.count >= 3) return 'fill-sky-400';
-                    if (value.count >= 2) return 'fill-sky-300';
-                    if (value.count >= 7) return 'fill-sky-200';
-                    return 'fill-gray-200 ';
-                  }}
-                  tooltipDataAttrs={(value) => ({
-                    'data-tip': `${value.date}: ${value.count || 0} раз(а) был активен`,
-                  })}
-                  gutterSize={3}
-                />
+                <div className="min-w-[790px] w-full lg:max-w-none "> 
+                  <CalendarHeatmap
+                    startDate={subDays(today, 266)}
+                    endDate={today}
+                    values={values}
+                    showWeekdayLabels={false}
+                    showMonthLabels={false}
+                    classForValue={(value) => {
+                      if (!value) return 'fill-sky-100';
+                      if (value.count >= 7) return 'fill-sky-200';
+                      if (value.count >= 5) return 'fill-sky-500';
+                      if (value.count >= 3) return 'fill-sky-400';
+                      if (value.count >= 2) return 'fill-sky-300';
+                      return 'fill-gray-200 ';
+                    }}
+                    tooltipDataAttrs={(value) => ({
+                      'data-tip': `${value.date}: ${value.count || 0} раз(а) был активен`,
+                    })}
+                    gutterSize={3}
+                  />
+                </div>
               </div>
+
               <div className="mt-4 flex justify-between">
-                <p className="text-xs text-slate-600">2025-yil uchun faolliklar</p>
+                <p className="text-xs text-slate-600 dark:text-white">2025-yil uchun faolliklar</p>
 
                 <div className="flex items-center space-x-1">
-                  <p className="text-xs text-slate-600">
-                    Kam
-                  </p>
+                  <p className="text-xs text-slate-600 dark:text-white">Kam</p>
                   <div className="w-4 h-4 rounded-sm bg-sky-100"></div>
                   <div className="w-4 h-4 rounded-sm bg-sky-200"></div>
                   <div className="w-4 h-4 rounded-sm bg-sky-300"></div>
                   <div className="w-4 h-4 rounded-sm bg-sky-400"></div>
                   <div className="w-4 h-4 rounded-sm bg-sky-500"></div>
-                  <p className="text-xs text-slate-600">
-                    Ko'p
-                  </p>
+                  <p className="text-xs text-slate-600 dark:text-white">Ko'p</p>
                 </div>
               </div>
             </div>
           </div>
 
+
           {/* Payment History */}
           <div className={` ${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
 
-            <div className="bg-white dark:bg-[#111728] p-4 rounded-xl">
+            <div className="bg-white dark:bg-slate-800 p-4 rounded-xl">
               <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
               <div className="grid grid-cols-1  md:table w-full">
 
@@ -389,7 +389,7 @@ function MyProfile() {
                   </div>
 
                   <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hтзьidden">SANA:</span>
+                    <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
                     <span className="text-black dark:text-white">28.11.2024</span>
                   </div>
 
@@ -415,7 +415,7 @@ function MyProfile() {
           {/* My Devices */}
           <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}  >
 
-            <div className="bg-white dark:bg-[#111728] p-3 rounded-xl hidden md:block ">
+            <div className="bg-white dark:bg-slate-800 p-3 rounded-xl hidden md:block ">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
                 <p className="text-[#7F868B] mt-4 font-light text-[13px]">
@@ -487,7 +487,7 @@ function MyProfile() {
             </div>
 
 
-            <div className="bg-white dark:bg-[#111728] rounded-xl p-4 block md:hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-4 block md:hidden">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
                 <p className="text-slate-500 dark:text-slate-100 mt-4 font-light text-[13px]">
