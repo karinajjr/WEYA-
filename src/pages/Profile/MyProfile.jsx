@@ -307,47 +307,55 @@ function MyProfile() {
           </div>
 
           {/* My year activity*/}
-          <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`} >
+          <div className={`${selectMenu === "my-year-activity" ? "block" : "hidden"}`}>
             <div className="p-4 bg-white dark:bg-slate-800">
-              <div className="flex justify-between mb-3 text-slate-800 dark:text-white pl-6 pr-5 ">
-                {uzbekMonths.map((month, index) => (
-                  <span key={index} className="w-[32px] text-center text-[8px] md:text-[13px]">{month}</span>
-                ))}
-              </div>
+              <div className="flex">
 
-              <div className="flex overflow-x-auto">
-                <div className="flex flex-col  space-y-1 lg:space-y-1.5 xl:space-y-2  2xl:space-y-4 justify-end mr-2 text-slate-800 dark:text-white">
+                <div className="flex flex-col space-y-0.5 lg:space-y-0.5 xl:space-y-2 2xl:space-y-3.5 justify-end mr-2 text-slate-800 dark:text-white">
                   {uzbekDays.map((day, index) => (
                     <span key={index} className="h-[16px] text-[11px]">{day}</span>
                   ))}
                 </div>
 
-                <div className="min-w-[790px] w-full lg:max-w-none "> 
-                  <CalendarHeatmap
-                    startDate={subDays(today, 266)}
-                    endDate={today}
-                    values={values}
-                    showWeekdayLabels={false}
-                    showMonthLabels={false}
-                    classForValue={(value) => {
-                      if (!value) return 'fill-sky-100';
-                      if (value.count >= 7) return 'fill-sky-200';
-                      if (value.count >= 5) return 'fill-sky-500';
-                      if (value.count >= 3) return 'fill-sky-400';
-                      if (value.count >= 2) return 'fill-sky-300';
-                      return 'fill-gray-200 ';
-                    }}
-                    tooltipDataAttrs={(value) => ({
-                      'data-tip': `${value.date}: ${value.count || 0} раз(а) был активен`,
-                    })}
-                    gutterSize={3}
-                  />
+                <div className="overflow-x-auto w-full">
+                  <div className="min-w-[700px]">
+
+                    <div className="w-full flex justify-between mb-3 text-slate-800 dark:text-white text-[13px]">
+                      {uzbekMonths.map((month, index) => (
+                        <span key={index} className=" w-full">
+                          {month}
+                        </span>
+                      ))}
+                    </div>
+
+                    <CalendarHeatmap
+                      startDate={subDays(today, 266)}
+                      endDate={today}
+                      values={values}
+                      showWeekdayLabels={false}
+                      showMonthLabels={false}
+                      classForValue={(value) => {
+                        if (!value) return 'fill-sky-100';
+                        if (value.count >= 7) return 'fill-sky-200';
+                        if (value.count >= 5) return 'fill-sky-500';
+                        if (value.count >= 3) return 'fill-sky-400';
+                        if (value.count >= 2) return 'fill-sky-300';
+                        return 'fill-gray-200';
+                      }}
+                      tooltipDataAttrs={(value) => ({
+                        'data-tip': `${value.date}: ${value.count || 0} раз(а) был активен`,
+                      })}
+                      gutterSize={3}
+                    />
+                  </div>
                 </div>
+
+
+
               </div>
 
               <div className="mt-4 flex justify-between">
                 <p className="text-xs text-slate-600 dark:text-white">2025-yil uchun faolliklar</p>
-
                 <div className="flex items-center space-x-1">
                   <p className="text-xs text-slate-600 dark:text-white">Kam</p>
                   <div className="w-4 h-4 rounded-sm bg-sky-100"></div>
@@ -360,6 +368,7 @@ function MyProfile() {
               </div>
             </div>
           </div>
+
 
 
           {/* Payment History */}
