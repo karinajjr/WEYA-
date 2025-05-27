@@ -260,7 +260,7 @@ function MyProfile() {
           {/* My activity*/}
           <div className={`${selectMenu === "my-activity" ? "block" : "hidden"}`}  >
 
-            <div className=" space-y-4 h-screen">
+            <div className=" space-y-4 ">
               <div className="bg-white dark:bg-slate-800 py-3 px-5 flex justify-between rounded-xl items-center shadow">
                 <div className="flex gap-3 items-center ">
                   <div className="avatar">
@@ -369,8 +369,6 @@ function MyProfile() {
             </div>
           </div>
 
-
-
           {/* Payment History */}
           <div className={` ${selectMenu === "my-paymenthistory" ? "block" : "hidden"}`} >
 
@@ -423,16 +421,15 @@ function MyProfile() {
 
           {/* My Devices */}
           <div className={`${selectMenu === "my-devices" ? "block" : "hidden"}`}  >
-
-            <div className="bg-white dark:bg-slate-800 p-3 rounded-xl hidden md:block ">
+            <div className="bg-white dark:bg-slate-800 p-3 rounded-xl ">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
-                <p className="text-[#7F868B] mt-4 font-light text-[13px]">
+                <p className=" mt-4 font-light text-[13px]">
                   Siz bir vaqtning oʻzida faqat 2ta qurilma orqali taʻlim
                   olishingiz mumkin.
                   <br />
                   Ilovalarni uchinchi qurilmada faollashtirish uchun avval mavjud
-                  ikkita qurilmalardan birini oʻchirishingiz kerak.
+                  ikkita qurilma lardan birini oʻchirishingiz kerak.
                 </p>
               </div>
 
@@ -444,8 +441,8 @@ function MyProfile() {
               </div>
 
               <div className="mt-4">
-                <table className="table table-zebra mt-4">
-                  <thead className="bg-[#F5FAFF] dark:bg-[#2b3656]">
+                <table className="table">
+                  <thead className="hidden md:table-header-group bg-[#F5FAFF] dark:bg-[#2b3656]">
                     <tr className="text-[#3F9CFB]">
                       <th>QURUIMA NOMI</th>
                       <th>FOALLASHTIRILGAAN SANA</th>
@@ -453,28 +450,79 @@ function MyProfile() {
                     </tr>
                   </thead>
 
-                  <tbody>
-                    <tr>
-                      <td className="flex">
-                        <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
-                        <div className="ml-3">
-                          <h1 className="font-medium text-nowrap">
-                            Mac OS 10.15.7, Chrome 133
-                          </h1>
-                          <p className="text-green-500 text-xs">Mazkur qurilma</p>
+                  <tbody className=" space-y-2">
+                    <tr className="flex flex-col md:table-row">
+                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-3">
+                        <div className="flex items-start">
+                          <i className="bi bi-laptop p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
+                          <div className="ml-3 w-full">
+                            <h1 className="font-medium text-nowrap">Mac OS 10.15.7, Chrome 133</h1>
+                            <div className="mt-1 gap-2 flex md:items-center md:gap-2">
+                              <p className="text-green-500 text-xs">Mazkur qurilma</p>
+                              <span className="text-xs md:hidden block">11:05:01, 04.03.2025</span>
+                            </div>
+                          </div>
                         </div>
                       </td>
-                      <td>11:05:01, 04.03.2025</td>
-                      <td>
-                        <button className="btn btn-sm flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600" onClick={() => document.getElementById("delete_device").showModal()} >
-                          <i className="bi bi-trash-fill flex justify-center items-center text-red-500"></i>
-                          <span>Delete</span>
-                        </button>
+                      <td className="hidden md:table-cell">11:05:01, 04.03.2025</td>
+                      <td className="">
+                        <div className="mt-3 md:mt-0 flex md:justify-start justify-end">
+                          <button className="btn w-full p-3  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            onClick={() => document.getElementById("delete_device").showModal()} >
+                            <i className="bi bi-trash-fill flex justify-center items-center text-red-500 mr-1"></i>
+                            <span>Delete</span>
+                          </button>
+                        </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td className="flex items-center">
-                        <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
+
+                    <tr className="flex flex-col md:table-row  ">
+                      <td className="flex flex-col md:flex-row md:items-center md:table-cell p-3">
+                        <div className="flex items-start">
+                          <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center bg-sky-500"></i>
+                          <div className="ml-3 w-full">
+                            <h1 className="font-medium text-nowrap"> Iphone 16.15.7, Chrome 133</h1>
+                            <div className="mt-1 gap-2 flex md:items-center md:gap-2">
+                              <p className="text-green-500 text-xs">Mazkur qurilma</p>
+                              <span className="text-xs  md:hidden block">11:05:01, 04.03.2025</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="hidden md:table-cell">11:05:01, 04.03.2025</td>
+                      <td className="">
+                        <div className="mt-3 md:mt-0 flex md:justify-start justify-end">
+                          <button className="btn w-full p-3  flex justify-center items-center border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
+                            onClick={() => document.getElementById("delete_device").showModal()} >
+                            <i className="bi bi-trash-fill flex justify-center items-center text-red-500 mr-1"></i>
+                            <span>Delete</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default MyProfile;
+
+
+
+
+
+
+
+
+{/* <tr>
+     <td className="flex items-center">
+                     <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                         <div className="ml-3">
                           <h1 className="font-medium text-center text-nowrap">
                             Iphone 16.15.7, Chrome 133
@@ -489,13 +537,9 @@ function MyProfile() {
                           <span>Delete</span>
                         </button>
                       </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+                    </tr> */}
 
-
+{/* 
             <div className="bg-white dark:bg-slate-800 rounded-xl p-4 block md:hidden">
               <div>
                 <h1 className="font-semibold text-xl">Faol qurilmalar</h1>
@@ -551,26 +595,7 @@ function MyProfile() {
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-
-
-        </div >
-      </section >
-    </>
-  );
-}
-
-export default MyProfile;
-
-
-
-
-
-
-
-
-
+            </div> */}
 
 
 
