@@ -374,47 +374,83 @@ function MyProfile() {
 
             <div className="bg-white dark:bg-slate-800 p-4 rounded-xl">
               <h1 className="font-semibold text-xl mb-4">To'lovlar tarixi</h1>
-              <div className="grid grid-cols-1  md:table w-full">
 
-                <div className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] text-[#6eb4fb] rounded-2xl font-semibold">
-                  <div className="table-row ">
-                    <div className="table-cell px-2 py-4">KURS NOMI</div>
-                    <div className="table-cell px-2 py-4">SANA</div>
-                    <div className="table-cell px-2 py-4">QIYMAT</div>
-                    <div className="table-cell px-2 py-4">TO'LOV TURI</div>
-                    <div className="table-cell px-2 py-4">STATUS</div>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 md:table w-full">
 
-                <div className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
+                <thead className="hidden md:table-header-group  bg-[#F5FAFF] dark:bg-[#2b3656] rounded-2xl font-semibold">
+                  <tr className="text-sky-500 dark:text-white ">
+                    <th>KURS NOMI</th>
+                    <th>SANA</th>
+                    <th>QIYMAT</th>
+                    <th>TO'LOV TURI</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
 
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">KURS NOMI:</span>
-                    <div>
-                      <div className="text-black dark:text-white font-medium">Professional Node.JS</div>
-                    </div>
-                  </div>
+                <tbody>
+                  <tr className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
 
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
-                    <span className="text-black dark:text-white">28.11.2024</span>
-                  </div>
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">KURS NOMI:</span>
+                      <span className="text-black dark:text-white font-medium">Professional Node.JS</span>
+                    </td>
 
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">QIYMAT:</span>
-                    <span className="text-[#3F9CFB]">247.000 so'm</span>
-                  </div>
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
+                      <span className="text-black dark:text-white">28.11.2024</span>
+                    </td>
 
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">TO'LOV TURI:</span>
-                    <span className="text-black dark:text-white">Bir martalik toʻlov</span>
-                  </div>
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">QIYMAT:</span>
+                      <span className="text-[#3F9CFB]">247.000 so'm</span>
+                    </td>
 
-                  <div className="flex justify-between md:table-cell md:p-2">
-                    <span className="text-[#6eb4fb] font-semibold md:hidden">STATUS:</span>
-                    <span className="text-[#FDC724]">Jarayonda</span>
-                  </div>
-                </div>
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">TO'LOV TURI:</span>
+                      <span className="text-black dark:text-white">Bir martalik toʻlov</span>
+                    </td>
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">STATUS:</span>
+                      <span className="text-[#FDC724]">Jarayonda</span>
+                    </td>
+                  </tr>
+
+                  <tr className="grid grid-cols-1  md:table-row mb-3 mt-3 rounded-xl border-b border-slate-300 dark:border-slate-400"></tr>
+
+                  <tr className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">KURS NOMI:</span>
+                      <span className="text-black dark:text-white font-medium">Professional Node.JS</span>
+                    </td>
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">SANA:</span>
+                      <span className="text-black dark:text-white">28.11.2024</span>
+                    </td>
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">QIYMAT:</span>
+                      <span className="text-[#3F9CFB]">247.000 so'm</span>
+                    </td>
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">TO'LOV TURI:</span>
+                      <span className="text-black dark:text-white">Bir martalik toʻlov</span>
+                    </td>
+
+                    <td className="flex justify-between md:table-cell md:p-2">
+                      <span className="text-[#6eb4fb] font-semibold md:hidden">STATUS:</span>
+                      <span className="text-[#FDC724]">Jarayonda</span>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+
+
+
               </div>
             </div>
           </div>
@@ -442,7 +478,7 @@ function MyProfile() {
 
               <div className="mt-4">
                 <table className="table">
-                  <thead className="hidden md:table-header-group bg-[#F5FAFF] dark:bg-[#2b3656]">
+                  <thead className="hidden lg:table-header-group bg-[#F5FAFF] dark:bg-[#2b3656]">
                     <tr className="text-[#3F9CFB]">
                       <th>QURUIMA NOMI</th>
                       <th>FOALLASHTIRILGAAN SANA</th>
@@ -517,6 +553,13 @@ export default MyProfile;
 
 
 
+{/* <div className="table-row ">
+                    <div className="table-cell px-2 py-4">KURS NOMI</div>
+                    <div className="table-cell px-2 py-4">SANA</div>
+                    <div className="table-cell px-2 py-4">QIYMAT</div>
+                    <div className="table-cell px-2 py-4">TO'LOV TURI</div>
+                    <div className="table-cell px-2 py-4">STATUS</div>
+                  </div> */}
 
 
 
@@ -596,16 +639,6 @@ export default MyProfile;
                 </div>
               </div>
             </div> */}
-
-
-
-
-
-
-
-
-
-
 
 
 
