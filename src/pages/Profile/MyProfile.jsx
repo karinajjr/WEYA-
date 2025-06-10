@@ -387,7 +387,7 @@ function MyProfile() {
                   </tr>
                 </thead>
 
-                <tbody>
+                <tbody className="">
                   <tr className="grid grid-cols-1  gap-2 md:table-row space-y-3 md:p-0 rounded-xl">
 
                     <td className="flex justify-between md:table-cell md:p-2">
@@ -445,12 +445,8 @@ function MyProfile() {
                       <span className="text-[#FDC724]">Jarayonda</span>
                     </td>
                   </tr>
-
-
                 </tbody>
-
-
-
+ 
               </div>
             </div>
           </div>
@@ -563,7 +559,7 @@ export default MyProfile;
 
 
 
-{/* <tr>
+{/*  <tr>
      <td className="flex items-center">
                      <i className="bi bi-phone p-2 rounded-md text-xl inline-flex items-center justify-center"></i>
                         <div className="ml-3">
